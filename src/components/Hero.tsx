@@ -1,13 +1,22 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 const Hero = () => (
-  <section
-    className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    style={{ background: `linear-gradient(to bottom, hsl(220 25% 5% / 0.85), hsl(220 25% 5% / 0.95)), url(${heroBg}) center/cover no-repeat` }}
-  >
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    {/* Video background */}
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="absolute inset-0 w-full h-full object-cover"
+      src={heroVideo.url}
+    />
+    {/* Dark overlay */}
+    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,35%,7%)]/80 via-[hsl(215,35%,7%)]/85 to-[hsl(215,35%,7%)]/95" />
+
     {/* Pulsing agent dot */}
-    <div className="absolute top-28 right-8 md:right-16 flex items-center gap-2">
+    <div className="absolute top-28 right-8 md:right-16 flex items-center gap-2 z-10">
       <span className="relative flex h-3 w-3">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
         <span className="relative inline-flex rounded-full h-3 w-3 bg-primary animate-pulse-glow" />
@@ -15,7 +24,7 @@ const Hero = () => (
       <span className="text-xs text-primary font-medium">AI Agent Online</span>
     </div>
 
-    <div className="container mx-auto px-4 text-center pt-24 pb-16">
+    <div className="container mx-auto px-4 text-center pt-24 pb-16 relative z-10">
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -50,7 +59,7 @@ const Hero = () => (
         transition={{ delay: 0.6 }}
         className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
       >
-        <a href="#cta" className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:brightness-110 transition glow-green">
+        <a href="#cta" className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:brightness-110 transition glow-blue">
           Book Free Strategy Call
         </a>
         <a href="#services" className="border border-surface-dark-foreground/20 text-surface-dark-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:border-primary/50 hover:text-primary transition">

@@ -27,7 +27,7 @@ const CTASection = () => (
         transition={{ delay: 0.2 }}
         className="flex flex-col sm:flex-row gap-4 justify-center"
       >
-        <a href="#" className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:brightness-110 transition glow-green">
+        <a href="#" className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:brightness-110 transition glow-blue">
           Book Free Strategy Call
         </a>
         <a
