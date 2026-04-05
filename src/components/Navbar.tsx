@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -15,9 +16,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-surface-darker/90 backdrop-blur-md border-b border-primary/10">
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#" className="font-heading text-xl font-bold text-surface-dark-foreground">
-          Grow<span className="text-primary">Matic</span> SA
+      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="GrowMatic SA" className="h-10 w-auto" />
         </a>
 
         {/* Desktop */}
