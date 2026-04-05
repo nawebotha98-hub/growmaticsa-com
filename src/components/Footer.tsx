@@ -1,14 +1,14 @@
 import { Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="bg-surface-darker border-t border-primary/10 py-12">
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-3 gap-8 mb-8">
         <div>
-          <h3 className="font-heading text-xl font-bold text-surface-dark-foreground mb-2">
-            Grow<span className="text-primary">Matic</span> SA
-          </h3>
+          <img src={logo} alt="GrowMatic SA" className="h-12 w-auto mb-3" />
           <p className="text-surface-dark-foreground/50 text-sm">Automate. Grow. Dominate.</p>
+          <p className="text-surface-dark-foreground/40 text-xs mt-1">100% South African</p>
         </div>
         <div>
           <h4 className="font-heading font-semibold text-surface-dark-foreground mb-3 text-sm">Links</h4>
