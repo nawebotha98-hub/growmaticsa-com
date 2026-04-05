@@ -97,7 +97,7 @@ const PricingSection = () => (
               href="#cta"
               className={`block text-center py-3 rounded-xl font-semibold text-sm transition ${
                 p.featured
-                  ? "bg-primary text-primary-foreground hover:brightness-110 glow-green"
+                  ? "bg-primary text-primary-foreground hover:brightness-110 glow-blue"
                   : "border border-primary/30 text-primary hover:bg-primary/10"
               }`}
             >
