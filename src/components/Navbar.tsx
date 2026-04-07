@@ -32,12 +32,15 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a
-            href="#cta"
-            className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold hover:brightness-110 transition"
+          <button
+            onClick={() => {
+              const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
+              if (iframe) { iframe.style.display = 'block'; }
+            }}
+            className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold hover:brightness-110 transition cursor-pointer"
           >
             Book a Call
-          </a>
+          </button>
         </div>
 
         {/* Mobile toggle */}
@@ -66,13 +69,16 @@ const Navbar = () => {
                   {l.label}
                 </a>
               ))}
-              <a
-                href="#cta"
-                onClick={() => setOpen(false)}
-                className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold text-center"
+              <button
+                onClick={() => {
+                  setOpen(false);
+                  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
+                  if (iframe) { iframe.style.display = 'block'; }
+                }}
+                className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold text-center cursor-pointer"
               >
                 Book a Call
-              </a>
+              </button>
             </div>
           </motion.div>
         )}

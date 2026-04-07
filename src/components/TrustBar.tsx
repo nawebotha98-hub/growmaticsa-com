@@ -9,9 +9,9 @@ const stats = [
 ];
 
 const TrustBar = () => (
-  <section className="bg-surface-darker py-10 border-y border-primary/10">
+  <section className="bg-surface-darker py-6 border-y border-primary/10">
     <div className="container mx-auto px-4">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         {stats.map((s, i) => (
           <motion.div
             key={i}
