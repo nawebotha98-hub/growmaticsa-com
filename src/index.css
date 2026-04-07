@@ -2,85 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 210 25% 97%;
-    --foreground: 215 28% 12%;
+    --background: 0 0% 100%;
+    --foreground: 210 20% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 28% 12%;
+    --card-foreground: 210 20% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 12%;
+    --popover-foreground: 210 20% 14%;
 
-    --primary: 200 80% 44%;
+    --primary: 210 100% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 18% 94%;
-    --secondary-foreground: 215 28% 12%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 20% 14%;
 
-    --muted: 210 15% 93%;
-    --muted-foreground: 215 12% 48%;
+    --muted: 210 15% 96%;
+    --muted-foreground: 210 10% 46%;
 
-    --accent: 174 62% 42%;
+    --accent: 152 56% 42%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 20% 90%;
-    --input: 214 20% 90%;
-    --ring: 200 80% 44%;
+    --border: 210 18% 91%;
+    --input: 210 18% 91%;
+    --ring: 210 100% 45%;
 
-    --radius: 0.75rem;
+    --radius: 0.625rem;
 
-    --surface-dark: 215 32% 10%;
-    --surface-dark-foreground: 210 15% 90%;
-    --surface-darker: 215 35% 7%;
+    --surface-dark: 212 33% 12%;
+    --surface-dark-foreground: 210 15% 92%;
+    --surface-darker: 212 36% 8%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary: 210 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 200 80% 44%;
+    --sidebar-ring: 210 100% 45%;
 
-    --font-heading: 'Space Grotesk', sans-serif;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
     --font-body: 'Inter', sans-serif;
   }
 
   .dark {
-    --background: 215 32% 10%;
-    --foreground: 210 15% 90%;
-    --card: 215 28% 14%;
-    --card-foreground: 210 15% 90%;
-    --popover: 215 28% 14%;
-    --popover-foreground: 210 15% 90%;
-    --primary: 200 80% 44%;
+    --background: 212 33% 12%;
+    --foreground: 210 15% 92%;
+    --card: 212 28% 16%;
+    --card-foreground: 210 15% 92%;
+    --popover: 212 28% 16%;
+    --popover-foreground: 210 15% 92%;
+    --primary: 210 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 215 22% 18%;
+    --secondary: 212 22% 20%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 215 22% 18%;
-    --muted-foreground: 215 12% 55%;
-    --accent: 174 62% 42%;
+    --muted: 212 22% 20%;
+    --muted-foreground: 210 12% 55%;
+    --accent: 152 56% 42%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 215 22% 20%;
-    --input: 215 22% 20%;
-    --ring: 200 80% 44%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 212 22% 22%;
+    --input: 212 22% 22%;
+    --ring: 210 100% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 200 80% 44%;
+    --sidebar-primary: 210 100% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 200 80% 44%;
+    --sidebar-ring: 210 100% 50%;
   }
 }
 
@@ -90,7 +90,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
   }
 
@@ -105,15 +105,17 @@
 
 @layer utilities {
   .section-dark {
-    @apply bg-surface-dark text-surface-dark-foreground;
+    background: linear-gradient(180deg, hsl(212 33% 12%) 0%, hsl(212 36% 8%) 100%);
+    @apply text-surface-dark-foreground;
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(210 100% 50%), hsl(152 56% 42%));
   }
 
   .glow-blue {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.25), 0 0 60px hsl(var(--primary) / 0.08);
+    box-shadow: 0 4px 24px hsl(210 100% 45% / 0.25);
   }
 
   .card-hover {

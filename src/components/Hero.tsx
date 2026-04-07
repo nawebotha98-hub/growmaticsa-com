@@ -1,87 +1,90 @@
 import { motion } from "framer-motion";
-import heroVideo from "@/assets/hero-video.mp4.asset.json";
+import { ArrowRight, Play } from "lucide-react";
+
+const openGHLForm = () => {
+  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
+  if (iframe) iframe.style.display = 'block';
+};
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-    {/* Video background */}
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover"
-      src={heroVideo.url}
+  <section className="relative overflow-hidden">
+    {/* Background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-surface-dark via-surface-darker to-surface-dark" />
+    <div
+      className="absolute inset-0 opacity-[0.04]"
+      style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, hsl(210 100% 50%) 1px, transparent 0)`,
+        backgroundSize: "40px 40px",
+      }}
     />
-    {/* Dark overlay */}
-    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,35%,7%)]/80 via-[hsl(215,35%,7%)]/85 to-[hsl(215,35%,7%)]/95" />
+    {/* Gradient orbs */}
+    <div className="absolute top-20 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+    <div className="absolute bottom-20 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
-    {/* Pulsing agent dot */}
-    <div className="absolute top-28 right-8 md:right-16 flex items-center gap-2 z-10">
-      <span className="relative flex h-3 w-3">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-        <span className="relative inline-flex rounded-full h-3 w-3 bg-primary animate-pulse-glow" />
-      </span>
-      <span className="text-xs text-primary font-medium">AI Agent Online</span>
-    </div>
-
-    <div className="container mx-auto px-4 text-center pt-24 pb-16 relative z-10">
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="text-primary font-semibold text-sm tracking-widest uppercase mb-4"
-      >
-        Automate. Grow. Dominate.
-      </motion.p>
-
-      <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-surface-dark-foreground leading-tight max-w-4xl mx-auto"
-      >
-        Stop Doing Work A Robot{" "}
-        <span className="gradient-text">Can Do Better</span>
-      </motion.h1>
-
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
-        className="mt-6 text-lg md:text-xl text-surface-dark-foreground/70 max-w-2xl mx-auto"
-      >
-        GrowMatic SA builds AI agents and automation systems that save you time, cut costs, and keep your business running 24/7 — without hiring more staff.
-      </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6 }}
-        className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-      >
-        <button
-          onClick={() => {
-            const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
-            if (iframe) { iframe.style.display = 'block'; }
-          }}
-          className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:brightness-110 transition glow-blue cursor-pointer"
+    <div className="container mx-auto px-4 pt-32 pb-20 md:pt-40 md:pb-28 relative z-10">
+      <div className="max-w-3xl mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-8"
         >
-          Book Free Strategy Call
-        </button>
-        <a href="#services" className="border border-surface-dark-foreground/20 text-surface-dark-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:border-primary/50 hover:text-primary transition">
-          See Our Services
-        </a>
-      </motion.div>
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+          </span>
+          <span className="text-xs font-semibold text-primary-foreground/80 tracking-wide uppercase">
+            AI-Powered Automation for SA Businesses
+          </span>
+        </motion.div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        className="mt-6 text-xs text-surface-dark-foreground/40"
-      >
-        AI Systems Built for South African Businesses
-      </motion.p>
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary-foreground leading-[1.1] tracking-tight"
+        >
+          Stop Doing Work
+          <br />
+          A Robot{" "}
+          <span className="gradient-text">Can Do Better</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mt-6 text-lg text-primary-foreground/60 max-w-xl mx-auto leading-relaxed"
+        >
+          We build AI agents and automation systems that save you time, cut costs, and keep your South African business running 24/7.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <button
+            onClick={openGHLForm}
+            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-xl text-base font-semibold hover:brightness-110 transition glow-blue cursor-pointer"
+          >
+            Book Free Strategy Call
+            <ArrowRight size={18} />
+          </button>
+          <a
+            href="#services"
+            className="inline-flex items-center justify-center gap-2 border border-primary-foreground/20 text-primary-foreground/80 px-7 py-3.5 rounded-xl text-base font-semibold hover:border-primary/60 hover:text-primary transition"
+          >
+            <Play size={16} />
+            See Our Services
+          </a>
+        </motion.div>
+      </div>
     </div>
+
+    {/* Bottom fade */}
+    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent" />
   </section>
 );
 

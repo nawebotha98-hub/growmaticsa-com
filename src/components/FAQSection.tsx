@@ -16,31 +16,33 @@ const faqs = [
 ];
 
 const FAQSection = () => (
-  <section id="faq" className="py-20 md:py-28 bg-background">
-    <div className="container mx-auto px-4 max-w-3xl">
-      <motion.h2
+  <section id="faq" className="py-16 md:py-24 bg-secondary">
+    <div className="container mx-auto px-4 max-w-2xl">
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-heading text-3xl md:text-4xl font-bold text-center mb-14 text-foreground"
+        className="text-center mb-10"
       >
-        Frequently Asked <span className="gradient-text">Questions</span>
-      </motion.h2>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
+          Frequently Asked <span className="gradient-text">Questions</span>
+        </h2>
+      </motion.div>
 
-      <Accordion type="single" collapsible className="space-y-3">
+      <Accordion type="single" collapsible className="space-y-2">
         {faqs.map((f, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.05 }}
+            transition={{ delay: i * 0.04 }}
           >
-            <AccordionItem value={`faq-${i}`} className="bg-card border border-border rounded-xl px-6">
-              <AccordionTrigger className="text-left font-heading font-semibold text-card-foreground hover:text-primary transition-colors">
+            <AccordionItem value={`faq-${i}`} className="bg-card border border-border rounded-lg px-5">
+              <AccordionTrigger className="text-left font-heading font-semibold text-sm text-card-foreground hover:text-primary transition-colors py-4">
                 {f.q}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-sm leading-relaxed">
+              <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-4">
                 {f.a}
               </AccordionContent>
             </AccordionItem>

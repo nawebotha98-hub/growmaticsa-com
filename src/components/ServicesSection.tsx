@@ -3,47 +3,49 @@ import { MessageSquare, Target, Calendar, Star, Share2, Cog } from "lucide-react
 
 const services = [
   { icon: MessageSquare, title: "AI Customer Service Agent", desc: "24/7 WhatsApp and web chat agent. Answers FAQs, qualifies leads, escalates when needed.", popular: true },
-  { icon: Target, title: "Lead Capture & Follow-Up System", desc: "Captures leads from any source, auto follow-up via WhatsApp/email until they book or buy.", popular: false },
-  { icon: Calendar, title: "Booking & Appointment Automation", desc: "Self-booking, automated reminders, reduces no-shows by up to 60%.", popular: false },
+  { icon: Target, title: "Lead Capture & Follow-Up", desc: "Captures leads from any source, auto follow-up via WhatsApp/email until they book or buy.", popular: false },
+  { icon: Calendar, title: "Booking & Appointments", desc: "Self-booking, automated reminders, reduces no-shows by up to 60%.", popular: false },
   { icon: Star, title: "Review & Reputation Manager", desc: "Auto-requests Google reviews from happy customers, AI-drafted responses.", popular: false },
-  { icon: Share2, title: "Social Media & Content Automation", desc: "Generates, schedules, posts to Facebook & Instagram consistently.", popular: false },
-  { icon: Cog, title: "Custom AI Business Workflows", desc: "Any repetitive process mapped and automated: invoices, onboarding, reporting.", popular: false },
+  { icon: Share2, title: "Social Media Automation", desc: "Generates, schedules, posts to Facebook & Instagram consistently.", popular: false },
+  { icon: Cog, title: "Custom AI Workflows", desc: "Any repetitive process mapped and automated: invoices, onboarding, reporting.", popular: false },
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-20 md:py-28 bg-background">
+  <section id="services" className="py-16 md:py-24 bg-background">
     <div className="container mx-auto px-4">
-      <motion.h2
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground"
+        className="text-center mb-12"
       >
-        AI Systems That Actually <span className="gradient-text">Move the Needle</span>
-      </motion.h2>
-      <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
-        Every system is built to solve a real problem in your business — not just look cool.
-      </p>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
+          AI Systems That Actually <span className="gradient-text">Move the Needle</span>
+        </h2>
+        <p className="text-muted-foreground max-w-lg mx-auto">
+          Every system is built to solve a real problem — not just look cool.
+        </p>
+      </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
         {services.map((s, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="relative bg-card border border-border rounded-xl p-7 card-hover group"
+            transition={{ delay: i * 0.08 }}
+            className="relative bg-card border border-border rounded-xl p-6 card-hover group"
           >
             {s.popular && (
-              <span className="absolute -top-3 right-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
+              <span className="absolute -top-2.5 right-4 bg-accent text-accent-foreground text-xs font-bold px-3 py-0.5 rounded-full">
                 Most Popular
               </span>
             )}
-            <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-              <s.icon className="text-primary" size={22} />
+            <div className="w-10 h-10 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
+              <s.icon className="text-primary" size={20} />
             </div>
-            <h3 className="font-heading text-lg font-semibold mb-2 text-card-foreground">{s.title}</h3>
+            <h3 className="font-heading text-base font-bold mb-1.5 text-card-foreground">{s.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
           </motion.div>
         ))}
