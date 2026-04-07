@@ -9,34 +9,36 @@ const industries = [
 ];
 
 const IndustriesSection = () => (
-  <section id="industries" className="py-20 md:py-28 bg-background">
+  <section id="industries" className="py-16 md:py-24 bg-background">
     <div className="container mx-auto px-4">
-      <motion.h2
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-foreground"
+        className="text-center mb-12"
       >
-        Built for SA's <span className="gradient-text">Local Business Owners</span>
-      </motion.h2>
-      <p className="text-center text-muted-foreground mb-14 max-w-md mx-auto">
-        We understand the hustle. Our systems are designed for businesses like yours.
-      </p>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
+          Built for SA's <span className="gradient-text">Local Business Owners</span>
+        </h2>
+        <p className="text-muted-foreground max-w-md mx-auto">
+          We understand the hustle. Our systems are designed for businesses like yours.
+        </p>
+      </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
         {industries.map((ind, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-card border border-border rounded-xl p-7 text-center card-hover"
+            transition={{ delay: i * 0.08 }}
+            className="bg-card border border-border rounded-xl p-6 text-center card-hover"
           >
-            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
-              <ind.icon className="text-primary" size={24} />
+            <div className="w-11 h-11 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+              <ind.icon className="text-accent" size={22} />
             </div>
-            <h3 className="font-heading text-lg font-semibold mb-2 text-card-foreground">{ind.title}</h3>
+            <h3 className="font-heading text-base font-bold mb-1.5 text-card-foreground">{ind.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">{ind.desc}</p>
           </motion.div>
         ))}
