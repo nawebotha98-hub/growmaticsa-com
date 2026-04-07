@@ -59,9 +59,15 @@ const Hero = () => (
         transition={{ delay: 0.6 }}
         className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
       >
-        <a href="#cta" className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:brightness-110 transition glow-blue">
+        <button
+          onClick={() => {
+            const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
+            if (iframe) { iframe.style.display = 'block'; }
+          }}
+          className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:brightness-110 transition glow-blue cursor-pointer"
+        >
           Book Free Strategy Call
-        </a>
+        </button>
         <a href="#services" className="border border-surface-dark-foreground/20 text-surface-dark-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:border-primary/50 hover:text-primary transition">
           See Our Services
         </a>
