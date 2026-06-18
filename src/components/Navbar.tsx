@@ -30,11 +30,11 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-lg shadow-sm border-b border-border"
-          : "bg-transparent"
+          ? "bg-background/85 backdrop-blur-lg border-b border-border"
+          : "bg-background/70 backdrop-blur-md border-b border-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
+      <div className="container mx-auto flex items-center justify-between py-3.5 px-6">
         <a href="#" className="flex items-center gap-2">
           <img src={logo} alt="GrowMatic SA" className="h-9 w-auto" />
         </a>
@@ -44,27 +44,24 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className={`text-sm font-medium transition-colors ${
-                scrolled
-                  ? "text-foreground/70 hover:text-primary"
-                  : "text-primary-foreground/80 hover:text-primary-foreground"
-              }`}
+              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
             >
               {l.label}
             </a>
           ))}
           <button
             onClick={openGHLForm}
-            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:brightness-110 transition glow-blue cursor-pointer"
+            className="bg-accent text-accent-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.98] transition cursor-pointer"
           >
             Book a Call
           </button>
         </div>
 
         <button
-          className={`md:hidden ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className="md:hidden text-foreground"
           onClick={() => setOpen(!open)}
         >
+
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
