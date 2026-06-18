@@ -9,20 +9,20 @@ const openGHLForm = () => {
 const plans = [
   {
     name: "Starter",
-    setup: "R3,999",
+    setup: "R4,999",
     monthly: "R999/mo",
     featured: false,
     features: [
       "1 AI automation system",
       "WhatsApp or web chat integration",
-      "2-week setup",
+      "2-week average setup",
       "30-day onboarding support",
       "Monthly performance report",
     ],
   },
   {
     name: "Growth",
-    setup: "R6,999",
+    setup: "R9,999",
     monthly: "R1,999/mo",
     featured: true,
     features: [
@@ -80,7 +80,7 @@ const PricingSection = () => (
             }`}
           >
             {p.featured && (
-              <span className="inline-block bg-accent text-accent-foreground text-xs font-bold px-3 py-0.5 rounded-full mb-4">
+              <span className="inline-block bg-[hsl(42_65%_47%)] text-white text-xs font-bold px-3 py-0.5 rounded-full mb-4">
                 Most Popular
               </span>
             )}
@@ -94,7 +94,7 @@ const PricingSection = () => (
             <ul className="space-y-2.5 mb-6">
               {p.features.map((f, fi) => (
                 <li key={fi} className="flex items-start gap-2 text-sm text-surface-dark-foreground/75">
-                  <Check className="text-accent shrink-0 mt-0.5" size={15} />
+                  <Check className="text-primary shrink-0 mt-0.5" size={15} />
                   {f}
                 </li>
               ))}

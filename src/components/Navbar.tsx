@@ -51,7 +51,7 @@ const Navbar = () => {
           ))}
           <button
             onClick={openGHLForm}
-            className="bg-accent text-accent-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.98] transition cursor-pointer"
+            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-primary/20 hover:brightness-105 active:scale-[0.98] transition cursor-pointer"
           >
             Book a Call
           </button>

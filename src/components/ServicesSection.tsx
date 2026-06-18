@@ -38,7 +38,7 @@ const ServicesSection = () => (
             className="relative bg-card border border-border rounded-xl p-6 card-hover group"
           >
             {s.popular && (
-              <span className="absolute -top-2.5 right-4 bg-accent text-accent-foreground text-xs font-bold px-3 py-0.5 rounded-full">
+              <span className="absolute -top-2.5 right-4 bg-[hsl(42_65%_47%)] text-white text-xs font-bold px-3 py-0.5 rounded-full">
                 Most Popular
               </span>
             )}

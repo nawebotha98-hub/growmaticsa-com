@@ -21,7 +21,7 @@ const HowItWorks = () => (
           Simple. Fast. <span className="gradient-text">Done.</span>
         </h2>
         <p className="text-surface-dark-foreground/60 max-w-md mx-auto">
-          From first call to live system in days — not months.
+          From first call to live system in about 2 weeks.
         </p>
       </motion.div>
 

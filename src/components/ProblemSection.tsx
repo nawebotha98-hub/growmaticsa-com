@@ -12,7 +12,7 @@ const problems = [
     icon: Clock,
     title: "Slow Response = Lost Customers",
     desc: "80% of customers go with whoever responds first. If you're sleeping, you're losing.",
-    accent: "border-t-accent",
+    accent: "border-t-primary",
   },
   {
     icon: Lock,
