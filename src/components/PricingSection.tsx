@@ -80,7 +80,7 @@ const PricingSection = () => (
             }`}
           >
             {p.featured && (
-              <span className="inline-block bg-accent text-accent-foreground text-xs font-bold px-3 py-0.5 rounded-full mb-4">
+              <span className="inline-block bg-[hsl(42_65%_47%)] text-white text-xs font-bold px-3 py-0.5 rounded-full mb-4">
                 Most Popular
               </span>
             )}
