@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import ParticleField from "./ParticleField";
 
 const openGHLForm = () => {
   const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
@@ -14,10 +15,14 @@ const stats = [
 ];
 
 const Hero = () => (
-  <section className="relative overflow-hidden bg-background">
+  <section className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/40 to-white">
+    {/* Animated particle field */}
+    <ParticleField density={1.1} />
+
     {/* Subtle background orbs */}
     <div className="pointer-events-none absolute -top-32 -right-32 w-[28rem] h-[28rem] bg-primary/10 rounded-full blur-[110px]" />
     <div className="pointer-events-none absolute -bottom-24 -left-24 w-[22rem] h-[22rem] bg-accent/10 rounded-full blur-[90px]" />
+
 
     <div className="container mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-24 relative z-10">
       <div className="max-w-3xl mx-auto text-center">
