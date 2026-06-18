@@ -15,42 +15,43 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 20% 14%;
 
-    --primary: 210 100% 45%;
+    --primary: 150 56% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 210 20% 14%;
+    --secondary: 150 20% 96%;
+    --secondary-foreground: 150 30% 14%;
 
-    --muted: 210 15% 96%;
-    --muted-foreground: 210 10% 46%;
+    --muted: 150 15% 96%;
+    --muted-foreground: 150 8% 40%;
 
-    --accent: 152 56% 42%;
+    --accent: 42 65% 47%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 18% 91%;
-    --input: 210 18% 91%;
-    --ring: 210 100% 45%;
+    --border: 150 15% 90%;
+    --input: 150 15% 90%;
+    --ring: 150 56% 40%;
 
     --radius: 0.625rem;
 
-    --surface-dark: 212 33% 12%;
-    --surface-dark-foreground: 210 15% 92%;
-    --surface-darker: 212 36% 8%;
+    --surface-dark: 150 40% 12%;
+    --surface-dark-foreground: 150 15% 92%;
+    --surface-darker: 150 45% 8%;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 210 100% 45%;
+    --sidebar-foreground: 150 20% 26%;
+    --sidebar-primary: 150 56% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 210 100% 45%;
+    --sidebar-accent: 150 15% 95%;
+    --sidebar-accent-foreground: 150 30% 14%;
+    --sidebar-border: 150 15% 90%;
+    --sidebar-ring: 150 56% 40%;
 
-    --font-heading: 'Plus Jakarta Sans', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+
   }
 
   .dark {
