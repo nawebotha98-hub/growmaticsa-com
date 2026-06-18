@@ -42,7 +42,7 @@ const ParticleField = ({ density = 1, className = "" }: { density?: number; clas
         vx: (Math.random() - 0.5) * 0.25,
         vy: (Math.random() - 0.5) * 0.25,
         r: Math.random() * 1.6 + 0.6,
-        hue: Math.random() > 0.5 ? 210 : 152, // blue or green
+        hue: Math.random() > 0.5 ? 150 : 42, // mid-green or gold
         alpha: Math.random() * 0.5 + 0.25,
       }));
     };
