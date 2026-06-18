@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Plus Jakarta Sans', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['Syne', 'sans-serif'],
+        body: ['DM Sans', 'sans-serif'],
+
       },
       colors: {
         border: "hsl(var(--border))",
