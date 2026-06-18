@@ -24,11 +24,11 @@ const CTASection = () => (
         }} />
         <ParticleField density={0.7} />
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-primary/30 blur-[100px]" />
-        <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-accent/25 blur-[90px]" />
+        <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-primary/25 blur-[90px]" />
 
         <div className="relative px-6 sm:px-12 py-14 md:py-20 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 mb-6 backdrop-blur-sm">
-            <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
+            <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
             <span className="text-[11px] font-semibold text-white/90 uppercase tracking-wider">
               Limited Spots This Month
             </span>
@@ -47,7 +47,7 @@ const CTASection = () => (
           <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto sm:max-w-none">
             <button
               onClick={openGHLForm}
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-4 rounded-2xl text-base font-semibold shadow-xl shadow-accent/30 hover:brightness-110 active:scale-[0.98] transition cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-4 rounded-2xl text-base font-semibold shadow-xl shadow-primary/30 hover:brightness-110 active:scale-[0.98] transition cursor-pointer"
             >
               <Calendar size={18} />
               Book Free Strategy Call
@@ -68,13 +68,13 @@ const CTASection = () => (
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/50">
             <span className="flex items-center gap-1.5">
-              <span className="w-1 h-1 rounded-full bg-accent" /> No obligation
+              <span className="w-1 h-1 rounded-full bg-primary" /> No obligation
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-1 h-1 rounded-full bg-accent" /> Free 30-min audit
+              <span className="w-1 h-1 rounded-full bg-primary" /> Free 30-min audit
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-1 h-1 rounded-full bg-accent" /> 100% South African team
+              <span className="w-1 h-1 rounded-full bg-primary" /> 100% South African team
             </span>
           </div>
         </div>

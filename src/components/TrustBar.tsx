@@ -3,9 +3,9 @@ import { Clock, Users, Zap, MapPin } from "lucide-react";
 
 const stats = [
   { icon: Clock, label: "24/7 Automated Responses", color: "text-primary" },
-  { icon: Users, label: "Zero Extra Staff Needed", color: "text-accent" },
-  { icon: Zap, label: "2–3 Days Average Setup", color: "text-primary" },
-  { icon: MapPin, label: "100% Built for SA", color: "text-accent" },
+  { icon: Users, label: "Zero Extra Staff Needed", color: "text-primary" },
+  { icon: Zap, label: "2-Week Average Setup", color: "text-primary" },
+  { icon: MapPin, label: "100% Built for SA", color: "text-primary" },
 ];
 
 const TrustBar = () => (

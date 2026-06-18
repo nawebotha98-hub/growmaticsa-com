@@ -9,19 +9,19 @@ const openGHLForm = () => {
 
 const stats = [
   { value: "24/7", label: "Always-On Automation" },
-  { value: "2–3 Days", label: "Average Setup Time" },
+  { value: "2 Weeks", label: "Average Setup" },
   { value: "100%", label: "Built for South Africa" },
   { value: "0", label: "Extra Staff Needed" },
 ];
 
 const Hero = () => (
-  <section className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/40 to-white">
+  <section className="relative overflow-hidden bg-gradient-to-b from-white via-secondary/60 to-white">
     {/* Animated particle field */}
     <ParticleField density={1.1} />
 
     {/* Subtle background orbs */}
     <div className="pointer-events-none absolute -top-32 -right-32 w-[28rem] h-[28rem] bg-primary/10 rounded-full blur-[110px]" />
-    <div className="pointer-events-none absolute -bottom-24 -left-24 w-[22rem] h-[22rem] bg-accent/10 rounded-full blur-[90px]" />
+    <div className="pointer-events-none absolute -bottom-24 -left-24 w-[22rem] h-[22rem] bg-primary/10 rounded-full blur-[90px]" />
 
 
     <div className="container mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-24 relative z-10">
@@ -65,7 +65,7 @@ const Hero = () => (
         >
           <button
             onClick={openGHLForm}
-            className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-4 rounded-2xl text-base font-semibold shadow-lg shadow-accent/20 hover:brightness-105 active:scale-[0.98] transition cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-4 rounded-2xl text-base font-semibold shadow-lg shadow-primary/20 hover:brightness-105 active:scale-[0.98] transition cursor-pointer"
           >
             Book Free Strategy Call
             <ArrowRight size={18} />

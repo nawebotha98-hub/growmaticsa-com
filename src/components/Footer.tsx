@@ -22,7 +22,7 @@ const Footer = () => (
           </p>
           <button
             onClick={openGHLForm}
-            className="mt-6 inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-3 rounded-xl text-sm font-semibold shadow-lg shadow-accent/20 hover:brightness-110 active:scale-[0.98] transition cursor-pointer"
+            className="mt-6 inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-xl text-sm font-semibold shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition cursor-pointer"
           >
             Book a Strategy Call
           </button>
@@ -93,7 +93,7 @@ const Footer = () => (
           © 2025 GrowMatic SA. All rights reserved.
         </p>
         <div className="flex items-center gap-2 text-xs text-white/40">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
           Proudly South African · Built with precision
         </div>
       </div>

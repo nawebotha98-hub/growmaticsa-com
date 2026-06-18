@@ -35,8 +35,8 @@ const IndustriesSection = () => (
             transition={{ delay: i * 0.08 }}
             className="bg-card border border-border rounded-xl p-6 text-center card-hover"
           >
-            <div className="w-11 h-11 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-              <ind.icon className="text-accent" size={22} />
+            <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <ind.icon className="text-primary" size={22} />
             </div>
             <h3 className="font-heading text-base font-bold mb-1.5 text-card-foreground">{ind.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">{ind.desc}</p>

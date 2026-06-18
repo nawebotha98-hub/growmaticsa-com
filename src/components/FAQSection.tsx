@@ -8,7 +8,7 @@ import {
 
 const faqs = [
   { q: "Do I need technical knowledge to use this?", a: "Not at all. We build, set up, and manage everything for you. You just approve and go live. If you can use WhatsApp, you can use our systems." },
-  { q: "How long does setup take?", a: "Most systems go live within 2-3 business days. More complex setups may take up to 2 weeks, but we keep you updated every step of the way." },
+  { q: "How long does setup take?", a: "Most systems go live within about 2 weeks. We keep you updated every step of the way." },
   { q: "Will this work with WhatsApp?", a: "Absolutely. WhatsApp integration is at the core of what we do. Our AI agents can chat with your customers on WhatsApp 24/7, just like a real person." },
   { q: "What happens if something breaks?", a: "We monitor your systems and fix issues fast. Growth and Enterprise plans include priority support. You're never left hanging." },
   { q: "Is this affordable for a small business?", a: "Yes — our Starter plan is designed specifically for small businesses. The ROI typically pays for itself within the first month through saved time and captured leads." },
