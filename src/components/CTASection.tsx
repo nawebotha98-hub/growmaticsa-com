@@ -43,14 +43,16 @@ const CTASection = () => (
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto sm:max-w-none">
-            <button
-              onClick={openGHLForm}
+            <a
+              href={WHATSAPP_CALL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-4 rounded-2xl text-base font-semibold shadow-xl shadow-primary/30 hover:brightness-110 active:scale-[0.98] transition cursor-pointer"
             >
               <Calendar size={18} />
               Book Free Strategy Call
               <ArrowRight size={18} />
-            </button>
+            </a>
             <a
               href="https://wa.me/27000000000"
               target="_blank"
