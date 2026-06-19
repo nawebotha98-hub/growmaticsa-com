@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
-const openGHLForm = () => {
-  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
-  if (iframe) iframe.style.display = 'block';
-};
+const waLink = (plan: string) =>
+  `https://wa.me/27671082665?text=${encodeURIComponent(`Hi! I'm interested in the ${plan} plan`)}`;
 
 const plans = [
   {
