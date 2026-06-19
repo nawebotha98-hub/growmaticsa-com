@@ -2,10 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import ParticleField from "./ParticleField";
 
-const openGHLForm = () => {
-  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
-  if (iframe) iframe.style.display = 'block';
-};
+const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
+const WHATSAPP_GENERAL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20GrowMatic%20SA.";
 
 const CTASection = () => (
   <section id="cta" className="py-20 md:py-28 bg-background">
