@@ -46,12 +46,14 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <button
-            onClick={openGHLForm}
+          <a
+            href={WHATSAPP_CALL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-primary/20 hover:brightness-105 active:scale-[0.98] transition cursor-pointer"
           >
             Book a Call
-          </button>
+          </a>
         </div>
 
         <button
