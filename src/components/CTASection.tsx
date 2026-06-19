@@ -54,7 +54,7 @@ const CTASection = () => (
               <ArrowRight size={18} />
             </a>
             <a
-              href="https://wa.me/27000000000"
+              href={WHATSAPP_GENERAL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/15 text-white px-7 py-4 rounded-2xl text-base font-semibold hover:bg-white/10 active:scale-[0.98] transition backdrop-blur-sm"
