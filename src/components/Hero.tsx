@@ -60,13 +60,15 @@ const Hero = () => (
           transition={{ delay: 0.35 }}
           className="mt-10 flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto sm:max-w-none"
         >
-          <button
-            onClick={openGHLForm}
+          <a
+            href={WHATSAPP_CALL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-4 rounded-2xl text-base font-semibold shadow-lg shadow-primary/20 hover:brightness-105 active:scale-[0.98] transition cursor-pointer"
           >
             Book Free Strategy Call
             <ArrowRight size={18} />
-          </button>
+          </a>
           <a
             href="#services"
             className="inline-flex items-center justify-center gap-2 bg-white text-foreground border border-border px-7 py-4 rounded-2xl text-base font-semibold hover:bg-secondary active:scale-[0.98] transition"
