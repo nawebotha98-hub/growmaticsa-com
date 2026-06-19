@@ -17,12 +17,14 @@ const Footer = () => (
           <p className="text-white/70 text-base max-w-sm leading-relaxed">
             We build AI agents and automation systems that keep South African businesses running 24/7.
           </p>
-          <button
-            onClick={openGHLForm}
+          <a
+            href={WHATSAPP_CALL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-xl text-sm font-semibold shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition cursor-pointer"
           >
             Book a Strategy Call
-          </button>
+          </a>
         </div>
 
         <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
