@@ -70,18 +70,6 @@ const Footer = () => (
                 <MapPin size={14} /> South Africa
               </span>
             </div>
-            <div className="flex items-center gap-2 mt-5">
-              {[Linkedin, Twitter, Instagram].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-white hover:border-primary transition"
-                  aria-label="Social"
-                >
-                  <Icon size={15} />
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </div>
