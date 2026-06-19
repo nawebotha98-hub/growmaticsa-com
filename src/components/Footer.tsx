@@ -1,10 +1,7 @@
-import { Mail, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const openGHLForm = () => {
-  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
-  if (iframe) iframe.style.display = 'block';
-};
+const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
 const Footer = () => (
   <footer className="relative bg-[hsl(212_45%_8%)] text-white overflow-hidden">
