@@ -11,10 +11,7 @@ const navLinks = [
   { label: "FAQ", href: "#faq" },
 ];
 
-const openGHLForm = () => {
-  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
-  if (iframe) iframe.style.display = 'block';
-};
+const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
