@@ -98,8 +98,10 @@ const PricingSection = () => (
               ))}
             </ul>
 
-            <button
-              onClick={openGHLForm}
+            <a
+              href={waLink(p.name)}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`block w-full text-center py-3 rounded-lg font-semibold text-sm transition cursor-pointer ${
                 p.featured
                   ? "bg-primary text-primary-foreground hover:brightness-110 glow-blue"
@@ -107,7 +109,7 @@ const PricingSection = () => (
               }`}
             >
               Get Started
-            </button>
+            </a>
           </motion.div>
         ))}
       </div>
