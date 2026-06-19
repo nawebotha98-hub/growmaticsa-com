@@ -11,10 +11,7 @@ const navLinks = [
   { label: "FAQ", href: "#faq" },
 ];
 
-const openGHLForm = () => {
-  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
-  if (iframe) iframe.style.display = 'block';
-};
+const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -49,12 +46,14 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <button
-            onClick={openGHLForm}
+          <a
+            href={WHATSAPP_CALL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-primary/20 hover:brightness-105 active:scale-[0.98] transition cursor-pointer"
           >
             Book a Call
-          </button>
+          </a>
         </div>
 
         <button
@@ -85,15 +84,15 @@ const Navbar = () => {
                   {l.label}
                 </a>
               ))}
-              <button
-                onClick={() => {
-                  setOpen(false);
-                  openGHLForm();
-                }}
+              <a
+                href={WHATSAPP_CALL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
                 className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold text-center mt-2 cursor-pointer"
               >
                 Book a Call
-              </button>
+              </a>
             </div>
           </motion.div>
         )}

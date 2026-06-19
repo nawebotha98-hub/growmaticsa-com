@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
-const openGHLForm = () => {
-  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
-  if (iframe) iframe.style.display = 'block';
-};
+const waLink = (plan: string) =>
+  `https://wa.me/27671082665?text=${encodeURIComponent(`Hi! I'm interested in the ${plan} plan`)}`;
 
 const plans = [
   {
@@ -100,8 +98,10 @@ const PricingSection = () => (
               ))}
             </ul>
 
-            <button
-              onClick={openGHLForm}
+            <a
+              href={waLink(p.name)}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`block w-full text-center py-3 rounded-lg font-semibold text-sm transition cursor-pointer ${
                 p.featured
                   ? "bg-primary text-primary-foreground hover:brightness-110 glow-blue"
@@ -109,7 +109,7 @@ const PricingSection = () => (
               }`}
             >
               Get Started
-            </button>
+            </a>
           </motion.div>
         ))}
       </div>

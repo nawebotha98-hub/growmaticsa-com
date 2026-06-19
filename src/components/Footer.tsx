@@ -1,10 +1,7 @@
-import { Mail, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const openGHLForm = () => {
-  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
-  if (iframe) iframe.style.display = 'block';
-};
+const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
 const Footer = () => (
   <footer className="relative bg-[hsl(212_45%_8%)] text-white overflow-hidden">
@@ -20,12 +17,14 @@ const Footer = () => (
           <p className="text-white/70 text-base max-w-sm leading-relaxed">
             We build AI agents and automation systems that keep South African businesses running 24/7.
           </p>
-          <button
-            onClick={openGHLForm}
+          <a
+            href={WHATSAPP_CALL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-xl text-sm font-semibold shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition cursor-pointer"
           >
             Book a Strategy Call
-          </button>
+          </a>
         </div>
 
         <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
@@ -70,18 +69,6 @@ const Footer = () => (
               <span className="flex items-center gap-2 text-white/60">
                 <MapPin size={14} /> South Africa
               </span>
-            </div>
-            <div className="flex items-center gap-2 mt-5">
-              {[Linkedin, Twitter, Instagram].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-white hover:border-primary transition"
-                  aria-label="Social"
-                >
-                  <Icon size={15} />
-                </a>
-              ))}
             </div>
           </div>
         </div>

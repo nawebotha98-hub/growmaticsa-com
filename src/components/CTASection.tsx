@@ -2,10 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import ParticleField from "./ParticleField";
 
-const openGHLForm = () => {
-  const iframe = document.getElementById('popup-CRmbnwhhi1yorsIXyIrk') as HTMLIFrameElement;
-  if (iframe) iframe.style.display = 'block';
-};
+const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
+const WHATSAPP_GENERAL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20GrowMatic%20SA.";
 
 const CTASection = () => (
   <section id="cta" className="py-20 md:py-28 bg-background">
@@ -45,16 +43,18 @@ const CTASection = () => (
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto sm:max-w-none">
-            <button
-              onClick={openGHLForm}
+            <a
+              href={WHATSAPP_CALL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-4 rounded-2xl text-base font-semibold shadow-xl shadow-primary/30 hover:brightness-110 active:scale-[0.98] transition cursor-pointer"
             >
               <Calendar size={18} />
               Book Free Strategy Call
               <ArrowRight size={18} />
-            </button>
+            </a>
             <a
-              href="https://wa.me/27000000000"
+              href={WHATSAPP_GENERAL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/15 text-white px-7 py-4 rounded-2xl text-base font-semibold hover:bg-white/10 active:scale-[0.98] transition backdrop-blur-sm"
