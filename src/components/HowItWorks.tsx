@@ -1,46 +1,49 @@
 import { motion } from "framer-motion";
-import { Phone, FileText, Wrench, Rocket } from "lucide-react";
 
 const steps = [
-  { icon: Phone, title: "Free Strategy Call", desc: "We find your biggest time-wasters.", num: "01" },
-  { icon: FileText, title: "Custom Build Plan", desc: "Designed around your business.", num: "02" },
-  { icon: Wrench, title: "We Build It For You", desc: "No code, no tech stress — just approve.", num: "03" },
-  { icon: Rocket, title: "Go Live & Grow", desc: "System runs, we optimise monthly.", num: "04" },
+  { num: "01", title: "Free strategy call", desc: "We find your biggest time-wasters." },
+  { num: "02", title: "Custom build plan", desc: "Designed around your business." },
+  { num: "03", title: "We build it for you", desc: "No code, no tech stress — just approve." },
+  { num: "04", title: "Go live and grow", desc: "System runs, we optimise monthly." },
 ];
 
 const HowItWorks = () => (
-  <section id="how-it-works" className="section-dark py-16 md:py-24">
-    <div className="container mx-auto px-4">
+  <section id="how-it-works" className="section-ink">
+    <div className="container mx-auto px-6 py-32 md:py-40">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        transition={{ duration: 0.6 }}
+        className="max-w-3xl mb-20"
       >
-        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-3">
-          Simple. Fast. <span className="gradient-text">Done.</span>
+        <div className="eyebrow text-signal mb-6">The Process</div>
+        <h2
+          className="font-heading font-extrabold leading-[1.05]"
+          style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", letterSpacing: "-0.04em" }}
+        >
+          Simple. Fast. <span className="text-signal">Done.</span>
         </h2>
-        <p className="text-surface-dark-foreground/60 max-w-md mx-auto">
-          From first call to live system in about 2 weeks.
+        <p className="text-white/60 mt-6 text-lg font-light max-w-[60ch]">
+          From first call to live system in about two weeks.
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {steps.map((s, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="relative bg-surface-dark/50 border border-primary/10 rounded-xl p-6 text-center group hover:border-primary/25 transition-colors"
+            transition={{ delay: i * 0.1, duration: 0.6 }}
           >
-            <span className="text-xs font-bold text-primary/40 absolute top-4 right-4">{s.num}</span>
-            <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto mb-4">
-              <s.icon className="text-primary" size={22} />
-            </div>
-            <h3 className="font-heading text-base font-bold mb-1.5">{s.title}</h3>
-            <p className="text-surface-dark-foreground/55 text-sm leading-relaxed">{s.desc}</p>
+            <div className="hairline-dark mb-6" />
+            <div className="eyebrow text-signal mb-5">{s.num}</div>
+            <h3 className="font-heading text-xl font-bold mb-3" style={{ letterSpacing: "-0.02em" }}>
+              {s.title}
+            </h3>
+            <p className="text-white/55 text-[15px] font-light" style={{ lineHeight: 1.7 }}>{s.desc}</p>
           </motion.div>
         ))}
       </div>

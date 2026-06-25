@@ -1,54 +1,84 @@
 import { motion } from "framer-motion";
-import { MessageSquare, Target, Calendar, Star, Share2, Cog } from "lucide-react";
 
 const services = [
-  { icon: MessageSquare, title: "AI Customer Service Agent", desc: "24/7 WhatsApp and web chat agent. Answers FAQs, qualifies leads, escalates when needed.", popular: true },
-  { icon: Target, title: "Lead Capture & Follow-Up", desc: "Captures leads from any source, auto follow-up via WhatsApp/email until they book or buy.", popular: false },
-  { icon: Calendar, title: "Booking & Appointments", desc: "Self-booking, automated reminders, reduces no-shows by up to 60%.", popular: false },
-  { icon: Star, title: "Review & Reputation Manager", desc: "Auto-requests Google reviews from happy customers, AI-drafted responses.", popular: false },
-  { icon: Share2, title: "Social Media Automation", desc: "Generates, schedules, posts to Facebook & Instagram consistently.", popular: false },
-  { icon: Cog, title: "Custom AI Workflows", desc: "Any repetitive process mapped and automated: invoices, onboarding, reporting.", popular: false },
+  {
+    eyebrow: "Chat Agent",
+    title: "AI customer service agent.",
+    desc: "A 24/7 WhatsApp and web chat agent that answers FAQs, qualifies leads, and escalates to you only when it actually matters.",
+  },
+  {
+    eyebrow: "Lead Capture",
+    title: "Lead capture and follow-up.",
+    desc: "Captures leads from any source and follows up automatically over WhatsApp and email until they book or buy.",
+  },
+  {
+    eyebrow: "Booking",
+    title: "Booking and appointments.",
+    desc: "Customers self-book. Automated reminders cut no-shows by up to 60%.",
+  },
+  {
+    eyebrow: "Reputation",
+    title: "Review and reputation manager.",
+    desc: "Auto-requests Google reviews from happy customers. AI-drafted, on-brand responses, ready for one tap.",
+  },
+  {
+    eyebrow: "Social",
+    title: "Social media automation.",
+    desc: "Generates, schedules, and posts to Facebook and Instagram consistently — without you ever opening the app.",
+  },
+  {
+    eyebrow: "Custom",
+    title: "Custom AI workflows.",
+    desc: "Any repetitive process mapped and automated: invoices, onboarding, reporting. If a human is repeating it, we replace it.",
+  },
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-16 md:py-24 bg-background">
-    <div className="container mx-auto px-4">
+  <section id="services" className="section-paper">
+    <div className="container mx-auto px-6 py-32 md:py-40 max-w-5xl">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        transition={{ duration: 0.6 }}
+        className="mb-20"
       >
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
-          AI Systems That Actually <span className="gradient-text">Move the Needle</span>
+        <div className="eyebrow text-graphite mb-6">What We Build</div>
+        <h2
+          className="font-heading font-extrabold text-ink leading-[1.05] max-w-3xl"
+          style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", letterSpacing: "-0.04em" }}
+        >
+          AI systems that <span className="text-signal">move the needle</span>.
         </h2>
-        <p className="text-muted-foreground max-w-lg mx-auto">
-          Every system is built to solve a real problem — not just look cool.
-        </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+      <div>
         {services.map((s, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-            className="relative bg-card border border-border rounded-xl p-6 card-hover group"
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-12 gap-8 py-12 md:py-14 border-t border-hairline"
           >
-            {s.popular && (
-              <span className="absolute -top-2.5 right-4 bg-[hsl(42_65%_47%)] text-white text-xs font-bold px-3 py-0.5 rounded-full">
-                Most Popular
-              </span>
-            )}
-            <div className="w-10 h-10 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
-              <s.icon className="text-primary" size={20} />
+            <div className="md:col-span-3">
+              <div className="eyebrow text-graphite">{s.eyebrow}</div>
             </div>
-            <h3 className="font-heading text-base font-bold mb-1.5 text-card-foreground">{s.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+            <div className="md:col-span-9">
+              <h3
+                className="font-heading font-bold text-ink mb-4"
+                style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", letterSpacing: "-0.03em", lineHeight: 1.1 }}
+              >
+                {s.title}
+              </h3>
+              <p className="text-graphite text-[17px] font-light max-w-[60ch]" style={{ lineHeight: 1.7 }}>
+                {s.desc}
+              </p>
+            </div>
           </motion.div>
         ))}
+        <div className="border-t border-hairline" />
       </div>
     </div>
   </section>
