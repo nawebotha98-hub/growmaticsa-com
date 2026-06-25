@@ -1,32 +1,31 @@
 import { motion } from "framer-motion";
-import { Clock, Users, Zap, MapPin } from "lucide-react";
 
 const stats = [
-  { icon: Clock, label: "24/7 Automated Responses", color: "text-primary" },
-  { icon: Users, label: "Zero Extra Staff Needed", color: "text-primary" },
-  { icon: Zap, label: "2-Week Average Setup", color: "text-primary" },
-  { icon: MapPin, label: "100% Built for SA", color: "text-primary" },
+  { value: "24/7", label: "Always-on automation" },
+  { value: "2wk", label: "Average setup time" },
+  { value: "100%", label: "Built for South Africa" },
+  { value: "0", label: "Extra staff needed" },
 ];
 
 const TrustBar = () => (
-  <section className="py-12 bg-background border-b border-border">
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+  <section className="section-paper border-t border-hairline">
+    <div className="container mx-auto px-6 py-24 md:py-32">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
         {stats.map((s, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-            className="flex items-center gap-3"
+            transition={{ delay: i * 0.08, duration: 0.5 }}
           >
-            <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0">
-              <s.icon className={s.color} size={20} />
+            <div
+              className="font-heading font-extrabold text-ink leading-none"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", letterSpacing: "-0.04em" }}
+            >
+              {s.value}
             </div>
-            <span className="text-foreground text-sm font-semibold leading-tight">
-              {s.label}
-            </span>
+            <div className="eyebrow text-graphite mt-4">{s.label}</div>
           </motion.div>
         ))}
       </div>

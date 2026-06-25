@@ -47,52 +47,63 @@ const plans = [
 ];
 
 const PricingSection = () => (
-  <section id="pricing" className="section-dark py-16 md:py-24">
-    <div className="container mx-auto px-4">
+  <section id="pricing" className="section-ink">
+    <div className="container mx-auto px-6 py-32 md:py-40">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        transition={{ duration: 0.6 }}
+        className="max-w-3xl mb-20"
       >
-        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-3">
-          Transparent. <span className="gradient-text">No Surprises.</span>
+        <div className="eyebrow text-signal mb-6">Pricing</div>
+        <h2
+          className="font-heading font-extrabold leading-[1.05]"
+          style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", letterSpacing: "-0.04em" }}
+        >
+          Transparent. <span className="text-signal">No surprises.</span>
         </h2>
-        <p className="text-surface-dark-foreground/60 max-w-md mx-auto">
+        <p className="text-white/60 mt-6 text-lg font-light max-w-[60ch]">
           Clear pricing. Real value. Cancel anytime.
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto items-start">
+      <div className="grid md:grid-cols-3 gap-px bg-white/8 border-y border-white/10">
         {plans.map((p, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className={`rounded-xl p-7 border ${
-              p.featured
-                ? "border-primary bg-primary/5 ring-1 ring-primary/20 scale-[1.03]"
-                : "border-surface-dark-foreground/10 bg-surface-darker/40"
-            }`}
+            transition={{ delay: i * 0.08, duration: 0.6 }}
+            className={`relative p-10 ${p.featured ? "bg-white/[0.04]" : "bg-[#0a0a0a]"}`}
           >
             {p.featured && (
-              <span className="inline-block bg-[hsl(42_65%_47%)] text-white text-xs font-bold px-3 py-0.5 rounded-full mb-4">
-                Most Popular
-              </span>
+              <div className="eyebrow text-signal mb-5">Most Popular</div>
             )}
-            <h3 className="font-heading text-lg font-bold mb-1">{p.name}</h3>
-            <div className="mb-1">
-              <span className="font-heading text-3xl font-extrabold">{p.setup}</span>
-              <span className="text-surface-dark-foreground/50 text-sm ml-1">once-off</span>
-            </div>
-            <p className="text-primary font-semibold text-sm mb-5">+ {p.monthly}</p>
+            {!p.featured && <div className="eyebrow text-white/40 mb-5">Plan</div>}
 
-            <ul className="space-y-2.5 mb-6">
+            <h3 className="font-heading text-2xl font-bold mb-6" style={{ letterSpacing: "-0.02em" }}>
+              {p.name}
+            </h3>
+
+            <div className="mb-1">
+              <span
+                className="font-heading font-extrabold text-white"
+                style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", letterSpacing: "-0.04em", lineHeight: 1 }}
+              >
+                {p.setup}
+              </span>
+            </div>
+            <div className="text-white/50 text-sm mb-1">once-off setup</div>
+            <div className="text-signal text-sm font-medium mb-8">+ {p.monthly}</div>
+
+            <div className="hairline-dark mb-6" />
+
+            <ul className="space-y-3 mb-10">
               {p.features.map((f, fi) => (
-                <li key={fi} className="flex items-start gap-2 text-sm text-surface-dark-foreground/75">
-                  <Check className="text-primary shrink-0 mt-0.5" size={15} />
+                <li key={fi} className="flex items-start gap-3 text-[14px] text-white/75 font-light">
+                  <Check className="text-signal shrink-0 mt-0.5" size={15} />
                   {f}
                 </li>
               ))}
@@ -102,13 +113,13 @@ const PricingSection = () => (
               href={waLink(p.name)}
               target="_blank"
               rel="noopener noreferrer"
-              className={`block w-full text-center py-3 rounded-lg font-semibold text-sm transition cursor-pointer ${
+              className={`block w-full text-center py-3.5 rounded-full text-sm font-medium transition ${
                 p.featured
-                  ? "bg-primary text-primary-foreground hover:brightness-110 glow-blue"
-                  : "border border-primary/30 text-primary hover:bg-primary/10"
+                  ? "bg-signal text-white hover:brightness-110"
+                  : "border border-white/20 text-white hover:bg-white/5"
               }`}
             >
-              Get Started
+              Get started
             </a>
           </motion.div>
         ))}

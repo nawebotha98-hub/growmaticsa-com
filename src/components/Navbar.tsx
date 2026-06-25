@@ -5,7 +5,7 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Services", href: "#services" },
-  { label: "How It Works", href: "#how-it-works" },
+  { label: "Process", href: "#how-it-works" },
   { label: "Industries", href: "#industries" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
@@ -27,21 +27,21 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/85 backdrop-blur-lg border-b border-border"
-          : "bg-background/70 backdrop-blur-md border-b border-transparent"
+          ? "bg-paper/85 backdrop-blur-lg border-b border-hairline"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-3.5 px-6">
+      <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="GrowMatic SA" className="h-9 w-auto" />
+          <img src={logo} alt="GrowMatic SA" className="h-8 w-auto" />
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              className="text-[13px] font-medium text-ink/70 hover:text-ink transition-colors"
             >
               {l.label}
             </a>
@@ -50,18 +50,18 @@ const Navbar = () => {
             href={WHATSAPP_CALL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md shadow-primary/20 hover:brightness-105 active:scale-[0.98] transition cursor-pointer"
+            className="bg-ink text-white px-5 py-2.5 rounded-full text-[13px] font-medium hover:bg-signal transition-colors"
           >
-            Book a Call
+            Book a call
           </a>
         </div>
 
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-ink"
           onClick={() => setOpen(!open)}
+          aria-label="Menu"
         >
-
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
@@ -71,15 +71,15 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+            className="md:hidden bg-paper border-b border-hairline overflow-hidden"
           >
-            <div className="flex flex-col gap-1 px-4 pb-4">
+            <div className="flex flex-col gap-1 px-6 pb-6">
               {navLinks.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-foreground/70 hover:text-primary transition-colors py-2.5 text-sm font-medium"
+                  className="text-ink/70 hover:text-ink transition-colors py-3 text-sm font-medium"
                 >
                   {l.label}
                 </a>
@@ -89,9 +89,9 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold text-center mt-2 cursor-pointer"
+                className="bg-ink text-white px-5 py-3 rounded-full text-sm font-medium text-center mt-3"
               >
-                Book a Call
+                Book a call
               </a>
             </div>
           </motion.div>

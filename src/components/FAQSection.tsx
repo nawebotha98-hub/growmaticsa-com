@@ -16,33 +16,38 @@ const faqs = [
 ];
 
 const FAQSection = () => (
-  <section id="faq" className="py-16 md:py-24 bg-secondary">
-    <div className="container mx-auto px-4 max-w-2xl">
+  <section id="faq" className="section-paper">
+    <div className="container mx-auto px-6 py-32 md:py-40 max-w-3xl">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-10"
+        transition={{ duration: 0.6 }}
+        className="mb-16"
       >
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
-          Frequently Asked <span className="gradient-text">Questions</span>
+        <div className="eyebrow text-graphite mb-6">FAQ</div>
+        <h2
+          className="font-heading font-extrabold text-ink leading-[1.05]"
+          style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", letterSpacing: "-0.04em" }}
+        >
+          Questions, <span className="text-signal">answered</span>.
         </h2>
       </motion.div>
 
-      <Accordion type="single" collapsible className="space-y-2">
+      <Accordion type="single" collapsible className="border-t border-hairline">
         {faqs.map((f, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.04 }}
+            transition={{ delay: i * 0.04, duration: 0.4 }}
           >
-            <AccordionItem value={`faq-${i}`} className="bg-card border border-border rounded-lg px-5">
-              <AccordionTrigger className="text-left font-heading font-semibold text-sm text-card-foreground hover:text-primary transition-colors py-4">
+            <AccordionItem value={`faq-${i}`} className="border-b border-hairline">
+              <AccordionTrigger className="text-left font-heading font-bold text-lg text-ink hover:text-signal transition-colors py-6" style={{ letterSpacing: "-0.02em" }}>
                 {f.q}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-4">
+              <AccordionContent className="text-graphite text-[15px] font-light pb-6 max-w-[60ch]" style={{ lineHeight: 1.7 }}>
                 {f.a}
               </AccordionContent>
             </AccordionItem>

@@ -8,15 +8,13 @@ export default {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1280px",
-      },
+      screens: { "2xl": "1280px" },
     },
     extend: {
       fontFamily: {
         heading: ['Syne', 'sans-serif'],
         body: ['DM Sans', 'sans-serif'],
-
+        mono: ['IBM Plex Mono', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -55,6 +53,11 @@ export default {
         "surface-dark": "hsl(var(--surface-dark))",
         "surface-dark-foreground": "hsl(var(--surface-dark-foreground))",
         "surface-darker": "hsl(var(--surface-darker))",
+        ink: "#0a0a0a",
+        paper: "#fafaf8",
+        signal: "#1f9d5c",
+        graphite: "#6b6b68",
+        hairline: "#e4e4e0",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -74,14 +77,8 @@ export default {
         "2xl": "1.25rem",
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+        "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
+        "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
