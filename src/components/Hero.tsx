@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
@@ -20,7 +21,7 @@ const PhoneMock = () => (
       <div className="rounded-[2.25rem] overflow-hidden bg-[#ECE5DD] h-[600px] flex flex-col">
         {/* whatsapp header */}
         <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full bg-[#1f9d5c] flex items-center justify-center font-semibold text-sm">G</div>
+          <img src={logo} alt="GrowMatic" className="w-9 h-9 rounded-full object-cover bg-[#1f9d5c]" />
           <div className="flex-1 min-w-0">
             <div className="text-[14px] font-medium leading-tight">GrowMatic Assistant</div>
             <div className="text-[11px] opacity-80 leading-tight">online</div>
