@@ -8,8 +8,8 @@ const problems = [
   },
   {
     eyebrow: "The Risk",
-    title: "Slow response means lost customers.",
-    desc: "80% of customers go with whoever responds first. If you're sleeping, you're losing.",
+    title: "Every missed call is a lost sale.",
+    desc: "When you don't pick up, most people don't leave a voicemail — they just call the next business on the list. If you're not answering, someone else is.",
   },
   {
     eyebrow: "The Trap",
