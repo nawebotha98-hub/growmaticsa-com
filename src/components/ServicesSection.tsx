@@ -14,12 +14,22 @@ const services = [
   {
     eyebrow: "Booking",
     title: "Booking and appointments.",
-    desc: "Customers self-book. Automated reminders cut no-shows by up to 60%.",
+    desc: "Customers self-book on WhatsApp in seconds. Automated reminders go out before every appointment so fewer people forget to show up.",
+  },
+  {
+    eyebrow: "Missed Call",
+    title: "Missed call text-back.",
+    desc: "When you can't get to the phone, we auto-send the caller a WhatsApp message within seconds. A missed call turns into a live conversation instead of a lost customer — built for trades, salons, and anyone who can't stop what they're doing to answer.",
+  },
+  {
+    eyebrow: "Dashboard",
+    title: "Client dashboard.",
+    desc: "A private, always-up-to-date link showing your upcoming bookings and leads — generated automatically from the same system that runs your WhatsApp. No extra app, no separate login, just one link that's always current.",
   },
   {
     eyebrow: "Reputation",
     title: "Review and reputation manager.",
-    desc: "Auto-requests Google reviews from happy customers. AI-drafted, on-brand responses, ready for one tap.",
+    desc: "Automatically asks happy customers for a Google review at the right moment. AI drafts on-brand replies to every review, ready for you to approve with one tap.",
   },
   {
     eyebrow: "Social",
