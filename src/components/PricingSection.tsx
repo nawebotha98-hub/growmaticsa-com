@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import TiltCard from "./TiltCard";
 
 const waLink = (plan: string) =>
   `https://wa.me/27671082665?text=${encodeURIComponent(`Hi! I'm interested in the ${plan} plan`)}`;
@@ -12,7 +13,7 @@ const plans = [
     featured: false,
     features: [
       "1 AI automation system",
-      "WhatsApp or web chat integration",
+      "AI agent on WhatsApp, email & website chat widget",
       "2-week average setup",
       "30-day onboarding support",
       "Monthly performance report",
@@ -25,8 +26,8 @@ const plans = [
     featured: true,
     features: [
       "3 AI automation systems",
-      "WhatsApp + email + social",
-      "Lead capture & follow-up",
+      "AI agent on WhatsApp, email & website chat widget",
+      "Lead capture & follow-up across all channels",
       "Booking system included",
       "Priority support + monthly strategy review",
     ],
@@ -38,8 +39,8 @@ const plans = [
     featured: false,
     features: [
       "Unlimited automations",
-      "Full business audit",
-      "Dedicated account manager",
+      "AI agent on WhatsApp, email & website chat widget",
+      "Full business audit + dedicated account manager",
       "Staff training included",
       "SLA and uptime guarantees",
     ],
