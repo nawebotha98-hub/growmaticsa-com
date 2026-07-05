@@ -101,8 +101,7 @@ const Hero = () => (
             className="mt-10 text-lg md:text-xl text-graphite font-light max-w-[60ch]"
             style={{ lineHeight: 1.7 }}
           >
-            Your AI agent answers customers on WhatsApp in seconds, books appointments while you sleep, and texts back every missed call — so one dropped ringtone doesn't have to mean one lost sale.
-          </motion.p>
+            Your AI agent answers customers on WhatsApp, email, and a live chat widget on your own website — books appointments while you sleep, and texts back every missed call, so one dropped ringtone doesn't have to mean one lost sale.
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
