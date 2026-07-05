@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import TiltCard from "./TiltCard";
 
 const services = [
   {
     eyebrow: "Chat Agent",
     title: "AI customer service agent.",
-    desc: "A 24/7 WhatsApp and web chat agent that answers FAQs, qualifies leads, and escalates to you only when it actually matters.",
+    desc: "One AI agent, three channels — WhatsApp, email, and a live chat widget embedded on your own website. Answers FAQs, qualifies leads, drafts on-brand email replies and follow-ups, and only escalates to you when a human actually needs to step in.",
   },
   {
     eyebrow: "Lead Capture",
