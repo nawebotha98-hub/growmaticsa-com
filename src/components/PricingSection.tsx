@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import TiltCard from "./TiltCard";
 
 const waLink = (plan: string) =>
   `https://wa.me/27671082665?text=${encodeURIComponent(`Hi! I'm interested in the ${plan} plan`)}`;
@@ -12,7 +13,7 @@ const plans = [
     featured: false,
     features: [
       "1 AI automation system",
-      "WhatsApp or web chat integration",
+      "AI agent on WhatsApp, email & website chat widget",
       "2-week average setup",
       "30-day onboarding support",
       "Monthly performance report",
@@ -25,8 +26,8 @@ const plans = [
     featured: true,
     features: [
       "3 AI automation systems",
-      "WhatsApp + email + social",
-      "Lead capture & follow-up",
+      "AI agent on WhatsApp, email & website chat widget",
+      "Lead capture & follow-up across all channels",
       "Booking system included",
       "Priority support + monthly strategy review",
     ],
@@ -38,8 +39,8 @@ const plans = [
     featured: false,
     features: [
       "Unlimited automations",
-      "Full business audit",
-      "Dedicated account manager",
+      "AI agent on WhatsApp, email & website chat widget",
+      "Full business audit + dedicated account manager",
       "Staff training included",
       "SLA and uptime guarantees",
     ],
@@ -64,7 +65,7 @@ const PricingSection = () => (
           Transparent. <span className="text-signal">No surprises.</span>
         </h2>
         <p className="text-white/60 mt-6 text-lg font-light max-w-[60ch]">
-          Clear pricing. Real value. Cancel anytime.
+          Clear pricing. Real value. Cancel anytime. Every tier includes the AI customer service agent across all three channels — WhatsApp, email, and a live chat widget on your website — as standard, not a paid add-on.
         </p>
       </motion.div>
 
@@ -76,8 +77,9 @@ const PricingSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08, duration: 0.6 }}
-            className={`relative p-10 ${p.featured ? "bg-white/[0.04]" : "bg-[#0a0a0a]"}`}
+            className={`relative ${p.featured ? "bg-white/[0.04]" : "bg-[#0a0a0a]"}`}
           >
+            <TiltCard max={4} className="p-10 will-change-transform">
             {p.featured && (
               <div className="eyebrow text-signal mb-5">Most Popular</div>
             )}
@@ -121,6 +123,7 @@ const PricingSection = () => (
             >
               Get started
             </a>
+            </TiltCard>
           </motion.div>
         ))}
       </div>

@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import TiltCard from "./TiltCard";
 
 const services = [
   {
     eyebrow: "Chat Agent",
     title: "AI customer service agent.",
-    desc: "A 24/7 WhatsApp and web chat agent that answers FAQs, qualifies leads, and escalates to you only when it actually matters.",
+    desc: "One AI agent, three channels — WhatsApp, email, and a live chat widget embedded on your own website. Answers FAQs, qualifies leads, drafts on-brand email replies and follow-ups, and only escalates to you when a human actually needs to step in.",
   },
   {
     eyebrow: "Lead Capture",
@@ -70,22 +71,24 @@ const ServicesSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-12 gap-8 py-12 md:py-14 border-t border-hairline"
+            className="border-t border-hairline"
           >
-            <div className="md:col-span-3">
-              <div className="eyebrow text-graphite">{s.eyebrow}</div>
-            </div>
-            <div className="md:col-span-9">
-              <h3
-                className="font-heading font-bold text-ink mb-4"
-                style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", letterSpacing: "-0.03em", lineHeight: 1.1 }}
-              >
-                {s.title}
-              </h3>
-              <p className="text-graphite text-[17px] font-light max-w-[60ch]" style={{ lineHeight: 1.7 }}>
-                {s.desc}
-              </p>
-            </div>
+            <TiltCard max={3} className="grid md:grid-cols-12 gap-8 py-12 md:py-14 will-change-transform">
+              <div className="md:col-span-3">
+                <div className="eyebrow text-graphite">{s.eyebrow}</div>
+              </div>
+              <div className="md:col-span-9">
+                <h3
+                  className="font-heading font-bold text-ink mb-4"
+                  style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", letterSpacing: "-0.03em", lineHeight: 1.1 }}
+                >
+                  {s.title}
+                </h3>
+                <p className="text-graphite text-[17px] font-light max-w-[60ch]" style={{ lineHeight: 1.7 }}>
+                  {s.desc}
+                </p>
+              </div>
+            </TiltCard>
           </motion.div>
         ))}
         <div className="border-t border-hairline" />

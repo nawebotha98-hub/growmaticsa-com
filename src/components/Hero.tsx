@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import logo from "@/assets/logo.png";
+import Hero3D from "./Hero3D";
 
 const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
@@ -66,8 +67,9 @@ const PhoneMock = () => (
 );
 
 const Hero = () => (
-  <section className="section-paper relative">
-    <div className="container mx-auto px-6 pt-36 pb-32 md:pt-44 md:pb-40">
+  <section className="section-paper relative overflow-hidden">
+    <Hero3D />
+    <div className="container mx-auto px-6 pt-36 pb-32 md:pt-44 md:pb-40 relative">
       <div className="grid lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-7">
           <motion.div
@@ -94,12 +96,14 @@ const Hero = () => (
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
+            data-multichannel="true"
             transition={{ delay: 0.25, duration: 0.6 }}
             className="mt-10 text-lg md:text-xl text-graphite font-light max-w-[60ch]"
             style={{ lineHeight: 1.7 }}
           >
-            Your AI agent answers customers on WhatsApp in seconds, books appointments while you sleep, and texts back every missed call — so one dropped ringtone doesn't have to mean one lost sale.
+            Your AI agent answers customers on WhatsApp, email, and a live chat widget on your own website — books appointments while you sleep, and texts back every missed call, so one dropped ringtone doesn't have to mean one lost sale.
           </motion.p>
+
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
