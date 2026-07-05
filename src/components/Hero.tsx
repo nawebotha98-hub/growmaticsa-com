@@ -98,7 +98,7 @@ const Hero = () => (
             className="mt-10 text-lg md:text-xl text-graphite font-light max-w-[60ch]"
             style={{ lineHeight: 1.7 }}
           >
-            We build AI agents that answer your customers on WhatsApp, capture leads, and book appointments — 24/7. So you can run your business without being chained to it.
+            Your AI agent answers customers on WhatsApp in seconds, books appointments while you sleep, and texts back every missed call — so one dropped ringtone doesn't have to mean one lost sale.
           </motion.p>
 
           <motion.div
