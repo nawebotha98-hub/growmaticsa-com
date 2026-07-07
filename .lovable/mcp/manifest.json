@@ -31,7 +31,7 @@
       {
         "name": "get_pricing",
         "title": "Get GrowMatic pricing",
-        "description": "Returns GrowMatic's current pricing plans (Starter, Growth, Enterprise) with setup fee, monthly fee, and included features.",
+        "description": "Returns GrowMatic's current pricing packages (Lead Response Bot, Admin Autopilot, Custom Automation Build) with setup fee, monthly fee, and included features. Start with a 30-day pilot — month-to-month, cancel anytime.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
