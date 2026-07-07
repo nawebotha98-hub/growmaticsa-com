@@ -7,45 +7,46 @@ const waLink = (plan: string) =>
 
 const plans = [
   {
-    name: "Starter",
-    setup: "R4,999",
-    monthly: "R999/mo",
-    featured: false,
+    name: "Lead Response Bot",
+    setup: "R5,000",
+    monthly: "R3,500/mo",
+    featured: true,
     features: [
-      "1 AI automation system",
-      "AI agent on WhatsApp, email & website chat widget",
-      "2-week average setup",
-      "30-day onboarding support",
+      "AI agent answering on WhatsApp, email & website chat — 24/7, replies in seconds",
+      "Lead capture & instant follow-up on every enquiry",
+      "Booking & appointment automation straight into your diary",
+      "Missed Call Text-Back included",
       "Monthly performance report",
     ],
   },
   {
-    name: "Growth",
-    setup: "R9,999",
-    monthly: "R1,999/mo",
-    featured: true,
+    name: "Admin Autopilot",
+    setup: "R7,500",
+    monthly: "R4,500/mo",
+    featured: false,
     features: [
-      "3 AI automation systems",
-      "AI agent on WhatsApp, email & website chat widget",
-      "Lead capture & follow-up across all channels",
-      "Booking system included",
+      "Everything in Lead Response Bot",
+      "Automated quoting & invoice follow-ups",
+      "Customer reminders (reduce no-shows)",
+      "Client Dashboard included",
       "Priority support + monthly strategy review",
     ],
   },
   {
-    name: "Enterprise",
-    setup: "Custom",
+    name: "Custom Automation Build",
+    setup: "From R15,000",
     monthly: "Custom",
     featured: false,
     features: [
-      "Unlimited automations",
-      "AI agent on WhatsApp, email & website chat widget",
+      "Bespoke workflow automation (CRM, email, WhatsApp, sheets)",
       "Full business audit + dedicated account manager",
+      "Unlimited custom automations",
       "Staff training included",
       "SLA and uptime guarantees",
     ],
   },
 ];
+
 
 const PricingSection = () => (
   <section id="pricing" className="section-ink">
@@ -65,8 +66,12 @@ const PricingSection = () => (
           Transparent. <span className="text-signal">No surprises.</span>
         </h2>
         <p className="text-white/60 mt-6 text-lg font-light max-w-[60ch]">
-          Clear pricing. Real value. Cancel anytime. Every tier includes the AI customer service agent across all three channels — WhatsApp, email, and a live chat widget on your website — as standard, not a paid add-on.
+          Clear pricing. Real value. Cancel anytime. Every package includes the AI customer service agent across all three channels — WhatsApp, email, and a live chat widget on your website — as standard, not a paid add-on.
         </p>
+        <p className="text-white/50 mt-4 text-base font-light max-w-[60ch]">
+          Start with a 30-day pilot — month-to-month, cancel anytime.
+        </p>
+
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-px bg-white/8 border-y border-white/10">

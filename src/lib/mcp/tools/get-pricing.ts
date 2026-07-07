@@ -1,40 +1,39 @@
 import { defineTool } from "@lovable.dev/mcp-js";
-import { z } from "zod";
 
 const PLANS = [
   {
-    name: "Starter",
-    setup: "R4,999 once-off",
-    monthly: "R999/month",
+    name: "Lead Response Bot",
+    setup: "R5,000 once-off",
+    monthly: "R3,500/month",
+    mostPopular: true,
     features: [
-      "1 AI automation system",
-      "AI agent on WhatsApp, email & website chat widget",
-      "2-week average setup",
-      "30-day onboarding support",
+      "AI agent answering on WhatsApp, email & website chat — 24/7, replies in seconds",
+      "Lead capture & instant follow-up on every enquiry",
+      "Booking & appointment automation straight into your diary",
+      "Missed Call Text-Back included",
       "Monthly performance report",
     ],
   },
   {
-    name: "Growth",
-    setup: "R9,999 once-off",
-    monthly: "R1,999/month",
-    mostPopular: true,
+    name: "Admin Autopilot",
+    setup: "R7,500 once-off",
+    monthly: "R4,500/month",
     features: [
-      "3 AI automation systems",
-      "AI agent on WhatsApp, email & website chat widget",
-      "Lead capture & follow-up across all channels",
-      "Booking system included",
+      "Everything in Lead Response Bot",
+      "Automated quoting & invoice follow-ups",
+      "Customer reminders (reduce no-shows)",
+      "Client Dashboard included",
       "Priority support + monthly strategy review",
     ],
   },
   {
-    name: "Enterprise",
-    setup: "Custom",
+    name: "Custom Automation Build",
+    setup: "From R15,000 once-off",
     monthly: "Custom",
     features: [
-      "Unlimited automations",
-      "AI agent on WhatsApp, email & website chat widget",
+      "Bespoke workflow automation (CRM, email, WhatsApp, sheets)",
       "Full business audit + dedicated account manager",
+      "Unlimited custom automations",
       "Staff training included",
       "SLA and uptime guarantees",
     ],
@@ -45,7 +44,7 @@ export default defineTool({
   name: "get_pricing",
   title: "Get GrowMatic pricing",
   description:
-    "Returns GrowMatic's current pricing plans (Starter, Growth, Enterprise) with setup fee, monthly fee, and included features.",
+    "Returns GrowMatic's current pricing packages (Lead Response Bot, Admin Autopilot, Custom Automation Build) with setup fee, monthly fee, and included features. Start with a 30-day pilot — month-to-month, cancel anytime.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
