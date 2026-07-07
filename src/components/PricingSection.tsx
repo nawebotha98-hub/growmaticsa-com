@@ -66,8 +66,12 @@ const PricingSection = () => (
           Transparent. <span className="text-signal">No surprises.</span>
         </h2>
         <p className="text-white/60 mt-6 text-lg font-light max-w-[60ch]">
-          Clear pricing. Real value. Cancel anytime. Every tier includes the AI customer service agent across all three channels — WhatsApp, email, and a live chat widget on your website — as standard, not a paid add-on.
+          Clear pricing. Real value. Cancel anytime. Every package includes the AI customer service agent across all three channels — WhatsApp, email, and a live chat widget on your website — as standard, not a paid add-on.
         </p>
+        <p className="text-white/50 mt-4 text-base font-light max-w-[60ch]">
+          Start with a 30-day pilot — month-to-month, cancel anytime.
+        </p>
+
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-px bg-white/8 border-y border-white/10">
