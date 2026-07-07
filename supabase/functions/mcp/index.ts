@@ -134,7 +134,7 @@ import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.0";
 var FAQS = [
   {
     q: "How long does setup take?",
-    a: "Most Starter systems go live within 2 weeks. Growth systems typically take 3-4 weeks depending on scope."
+    a: "Most Lead Response Bot systems go live within 2 weeks. Admin Autopilot and Custom Automation Build typically take 3-4 weeks depending on scope. Start with a 30-day pilot \u2014 month-to-month, cancel anytime."
   },
   {
     q: "Which channels does the AI agent work on?",
