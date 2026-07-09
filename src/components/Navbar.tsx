@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo.png";
+import Logo from "./Logo";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -32,11 +32,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#top" className="flex items-center gap-2.5">
-          <img src={logo} alt="" className="h-8 w-8 rounded-full object-cover" />
-          <span className="font-heading font-extrabold text-ink text-lg" style={{ letterSpacing: "-0.02em" }}>
-            GrowMatic <span className="text-signal">SA</span>
-          </span>
+        <a href="#top" className="flex items-center">
+          <Logo height={38} />
         </a>
 
         <div className="hidden md:flex items-center gap-10">

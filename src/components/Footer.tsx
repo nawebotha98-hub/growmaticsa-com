@@ -1,5 +1,5 @@
 import { Mail, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import Logo from "./Logo";
 import FooterGrowthCanvas from "./FooterGrowthCanvas";
 
 const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
@@ -10,11 +10,8 @@ const Footer = () => (
     <div className="container mx-auto px-6 pt-24 pb-8">
       <div className="grid lg:grid-cols-12 gap-12 pb-20">
         <div className="lg:col-span-5">
-          <a href="#top" className="inline-flex items-center gap-2.5 mb-6">
-            <img src={logo} alt="" className="h-9 w-9 rounded-full object-cover" />
-            <span className="font-heading font-extrabold text-ink text-xl" style={{ letterSpacing: "-0.02em" }}>
-              GrowMatic <span className="text-signal">SA</span>
-            </span>
+          <a href="#top" className="inline-flex items-center mb-6">
+            <Logo height={48} />
           </a>
           <p className="text-graphite text-[15px] font-light max-w-sm" style={{ lineHeight: 1.7 }}>
             We build AI agents and automation systems that keep South African businesses running 24/7 — so you never miss a customer again.
