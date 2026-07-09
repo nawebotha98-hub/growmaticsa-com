@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import logo from "@/assets/logo.png";
-import Hero3D from "./Hero3D";
+import HeroCanvas from "./HeroCanvas";
 
 const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
@@ -67,8 +67,8 @@ const PhoneMock = () => (
 );
 
 const Hero = () => (
-  <section className="section-paper relative overflow-hidden">
-    <Hero3D />
+  <section id="top" className="section-paper relative overflow-hidden">
+    <HeroCanvas />
     <div className="container mx-auto px-6 pt-36 pb-32 md:pt-44 md:pb-40 relative">
       <div className="grid lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-7">

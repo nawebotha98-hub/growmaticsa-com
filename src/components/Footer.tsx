@@ -1,28 +1,45 @@
 import { Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
+import FooterGrowthCanvas from "./FooterGrowthCanvas";
 
 const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
+const WHATSAPP_GENERAL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20GrowMatic%20SA.";
 
 const Footer = () => (
   <footer className="section-paper border-t border-hairline">
-    <div className="container mx-auto px-6 pt-24 pb-10">
-      <div className="grid lg:grid-cols-12 gap-12 pb-16">
+    <div className="container mx-auto px-6 pt-24 pb-8">
+      <div className="grid lg:grid-cols-12 gap-12 pb-20">
         <div className="lg:col-span-5">
-          <img src={logo} alt="GrowMatic SA" className="h-9 w-auto mb-6" />
-          <p className="text-graphite text-[15px] font-light max-w-sm" style={{ lineHeight: 1.7 }}>
-            We build AI agents and automation systems that keep South African businesses running 24/7.
-          </p>
-          <a
-            href={WHATSAPP_CALL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded-full text-sm font-medium hover:brightness-110 active:scale-[0.98] transition"
-          >
-            Book a strategy call
+          <a href="#top" className="inline-flex items-center gap-2.5 mb-6">
+            <img src={logo} alt="" className="h-9 w-9 rounded-full object-cover" />
+            <span className="font-heading font-extrabold text-ink text-xl" style={{ letterSpacing: "-0.02em" }}>
+              GrowMatic <span className="text-signal">SA</span>
+            </span>
           </a>
+          <p className="text-graphite text-[15px] font-light max-w-sm" style={{ lineHeight: 1.7 }}>
+            We build AI agents and automation systems that keep South African businesses running 24/7 — so you never miss a customer again.
+          </p>
+          <div className="mt-8 flex items-center gap-3 flex-wrap">
+            <a
+              href={WHATSAPP_CALL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded-full text-sm font-medium hover:brightness-110 active:scale-[0.98] transition"
+            >
+              Book a strategy call
+            </a>
+            <a
+              href={WHATSAPP_GENERAL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-hairline text-ink px-6 py-3 rounded-full text-sm font-medium hover:bg-white transition"
+            >
+              WhatsApp us
+            </a>
+          </div>
         </div>
 
-        <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-10">
+        <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-10 pt-3">
           <div>
             <div className="eyebrow text-graphite mb-5">Company</div>
             <div className="flex flex-col gap-3">
@@ -43,15 +60,24 @@ const Footer = () => (
             <div className="eyebrow text-graphite mb-5">Resources</div>
             <div className="flex flex-col gap-3">
               <a href="#faq" className="text-ink text-sm hover:text-signal transition-colors">FAQ</a>
+              <a href="#coming-soon" className="text-ink text-sm hover:text-signal transition-colors">AI Receptionist</a>
               <a href="#cta" className="text-ink text-sm hover:text-signal transition-colors">Contact</a>
             </div>
           </div>
 
           <div className="col-span-2 sm:col-span-1">
-            <div className="eyebrow text-graphite mb-5">Contact</div>
+            <div className="eyebrow text-graphite mb-5">Get in touch</div>
             <div className="flex flex-col gap-3 text-sm">
-              <a href="mailto:hello@growmaticsa.co.za" className="flex items-center gap-2 text-ink hover:text-signal transition-colors">
-                <Mail size={14} /> hello@growmaticsa.co.za
+              <a href="mailto:ewan@growmaticsa.com" className="flex items-center gap-2 text-ink hover:text-signal transition-colors">
+                <Mail size={14} /> ewan@growmaticsa.com
+              </a>
+              <a
+                href={WHATSAPP_GENERAL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink hover:text-signal transition-colors"
+              >
+                +27 67 108 2665
               </a>
               <span className="flex items-center gap-2 text-graphite">
                 <MapPin size={14} /> South Africa
@@ -61,9 +87,12 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="pt-8 border-t border-hairline flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="eyebrow text-graphite">© 2026 GrowMatic SA</p>
-        <p className="eyebrow text-graphite">Proudly South African</p>
+      <FooterGrowthCanvas />
+
+      <div className="pt-6 flex flex-col sm:flex-row flex-wrap items-center justify-between gap-3 eyebrow text-graphite">
+        <span>© 2026 GrowMatic SA · All rights reserved</span>
+        <span>growmaticsa.com</span>
+        <span>Proudly South African</span>
       </div>
     </div>
   </footer>

@@ -32,8 +32,11 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="GrowMatic SA" className="h-8 w-auto" />
+        <a href="#top" className="flex items-center gap-2.5">
+          <img src={logo} alt="" className="h-8 w-8 rounded-full object-cover" />
+          <span className="font-heading font-extrabold text-ink text-lg" style={{ letterSpacing: "-0.02em" }}>
+            GrowMatic <span className="text-signal">SA</span>
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-10">
