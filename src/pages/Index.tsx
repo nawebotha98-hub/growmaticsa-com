@@ -10,6 +10,7 @@ import IndustriesSection from "@/components/IndustriesSection";
 import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -27,6 +28,7 @@ const Index = () => (
     <PricingSection />
     <FAQSection />
     <CTASection />
+    <ContactSection />
     <Footer />
     <WhatsAppButton />
   </>
