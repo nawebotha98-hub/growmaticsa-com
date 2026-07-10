@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import TiltCard from "./TiltCard";
+import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
 const waLink = (plan: string) =>
   `https://wa.me/27671082665?text=${encodeURIComponent(`Hi! I'm interested in the ${plan} plan`)}`;
@@ -120,6 +121,7 @@ const PricingSection = () => (
               href={waLink(p.name)}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick(`pricing_${p.name.toLowerCase().replace(/\s+/g, "_")}`, `Hi! I'm interested in the ${p.name} plan`)}
               className={`block w-full text-center py-3.5 rounded-full text-sm font-medium transition ${
                 p.featured
                   ? "bg-signal text-white hover:brightness-110"

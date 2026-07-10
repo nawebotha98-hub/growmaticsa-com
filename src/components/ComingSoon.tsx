@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Calendar, Users, RefreshCw } from "lucide-react";
+import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
 const capabilities = [
   { icon: Phone, label: "Answers calls 24/7" },
@@ -59,6 +60,7 @@ const ComingSoon = () => (
             href="https://wa.me/27671082665?text=Hi!%20I'd%20like%20early%20access%20to%20the%20AI%20Receptionist."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("coming_soon_early_access", "Hi! I'd like early access to the AI Receptionist.")}
             className="inline-flex items-center justify-center gap-2 bg-signal text-white px-8 py-4 rounded-full text-[15px] font-medium hover:brightness-110 active:scale-[0.98] transition"
           >
             Join the early access list

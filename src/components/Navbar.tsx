@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
+import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -50,6 +51,7 @@ const Navbar = () => {
             href={WHATSAPP_CALL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("nav_book_call", "Hi! I'd like to book a free strategy call.")}
             className="bg-ink text-white px-5 py-2.5 rounded-full text-[13px] font-medium hover:bg-signal transition-colors"
           >
             Book a call
@@ -88,7 +90,10 @@ const Navbar = () => {
                 href={WHATSAPP_CALL}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  trackWhatsAppClick("nav_mobile_book_call", "Hi! I'd like to book a free strategy call.");
+                  setOpen(false);
+                }}
                 className="bg-ink text-white px-5 py-3 rounded-full text-sm font-medium text-center mt-3"
               >
                 Book a call

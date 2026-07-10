@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import LogoIcon from "./LogoIcon";
 import HeroCanvas from "./HeroCanvas";
+import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
 const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
@@ -115,6 +116,7 @@ const Hero = () => (
               href={WHATSAPP_CALL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("hero_book_call", "Hi! I'd like to book a free strategy call.")}
               className="inline-flex items-center justify-center gap-2 bg-signal text-white px-8 py-4 rounded-full text-[15px] font-medium hover:brightness-110 active:scale-[0.98] transition"
             >
               Book a free strategy call

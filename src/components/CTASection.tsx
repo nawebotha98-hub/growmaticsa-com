@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
 const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 const WHATSAPP_GENERAL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20GrowMatic%20SA.";
@@ -32,6 +33,7 @@ const CTASection = () => (
             href={WHATSAPP_CALL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("cta_book_call", "Hi! I'd like to book a free strategy call.")}
             className="inline-flex items-center justify-center gap-2 bg-signal text-white px-8 py-4 rounded-full text-[15px] font-medium hover:brightness-110 active:scale-[0.98] transition"
           >
             Book a free strategy call
@@ -41,6 +43,7 @@ const CTASection = () => (
             href={WHATSAPP_GENERAL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("cta_whatsapp_us", "Hi! I'd like to learn more about GrowMatic SA.")}
             className="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-8 py-4 rounded-full text-[15px] font-medium hover:bg-white/5 transition"
           >
             WhatsApp us
