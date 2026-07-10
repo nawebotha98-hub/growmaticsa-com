@@ -5,8 +5,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useSiteContent } from "@/lib/useSiteContent";
 
-const faqs = [
+type Faq = { q: string; a: string };
+
+const defaultFaqs: Faq[] = [
   { q: "Do I need technical knowledge to use this?", a: "Not at all. We build, set up, and manage everything for you. You just approve and go live. If you can use WhatsApp, you can use our systems." },
   { q: "How long does setup take?", a: "Most systems go live within about 2 weeks. We keep you updated every step of the way." },
   { q: "Will this work with WhatsApp?", a: "Absolutely. WhatsApp integration is at the core of what we do. Our AI agents can chat with your customers on WhatsApp 24/7, just like a real person." },
@@ -15,7 +18,10 @@ const faqs = [
   { q: "Can I see it before I pay?", a: "Of course. Book a free strategy call and we'll show you a live demo tailored to your business. No pressure, no obligation." },
 ];
 
-const FAQSection = () => (
+const FAQSection = () => {
+  const faqs = useSiteContent<Faq[]>("faqs", defaultFaqs);
+
+  return (
   <section id="faq" className="section-paper">
     <div className="container mx-auto px-6 py-32 md:py-40 max-w-3xl">
       <motion.div
@@ -56,6 +62,7 @@ const FAQSection = () => (
       </Accordion>
     </div>
   </section>
-);
+  );
+};
 
 export default FAQSection;
