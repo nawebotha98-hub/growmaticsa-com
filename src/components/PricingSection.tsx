@@ -2,11 +2,14 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import TiltCard from "./TiltCard";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
+import { useSiteContent } from "@/lib/useSiteContent";
 
 const waLink = (plan: string) =>
   `https://wa.me/27671082665?text=${encodeURIComponent(`Hi! I'm interested in the ${plan} plan`)}`;
 
-const plans = [
+type Plan = { name: string; setup: string; monthly: string; featured: boolean; features: string[] };
+
+const defaultPlans: Plan[] = [
   {
     name: "Lead Response Bot",
     setup: "R5,000",
@@ -49,7 +52,10 @@ const plans = [
 ];
 
 
-const PricingSection = () => (
+const PricingSection = () => {
+  const plans = useSiteContent<Plan[]>("pricing", defaultPlans);
+
+  return (
   <section id="pricing" className="section-ink">
     <div className="container mx-auto px-6 py-32 md:py-40">
       <motion.div
@@ -136,6 +142,7 @@ const PricingSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default PricingSection;

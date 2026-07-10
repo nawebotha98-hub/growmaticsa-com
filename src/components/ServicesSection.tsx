@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import TiltCard from "./TiltCard";
+import { useSiteContent } from "@/lib/useSiteContent";
 
-const services = [
+type Service = { eyebrow: string; title: string; desc: string };
+
+const defaultServices: Service[] = [
   {
     eyebrow: "Chat Agent",
     title: "AI customer service agent.",
@@ -44,7 +47,10 @@ const services = [
   },
 ];
 
-const ServicesSection = () => (
+const ServicesSection = () => {
+  const services = useSiteContent<Service[]>("services", defaultServices);
+
+  return (
   <section id="services" className="section-paper">
     <div className="container mx-auto px-6 py-32 md:py-40 max-w-5xl">
       <motion.div
@@ -95,6 +101,7 @@ const ServicesSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default ServicesSection;
