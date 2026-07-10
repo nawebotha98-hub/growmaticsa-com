@@ -47,6 +47,33 @@ export type Database = {
         }
         Relationships: []
       }
+      whatsapp_clicks: {
+        Row: {
+          id: string
+          created_at: string
+          button: string
+          whatsapp_number: string
+          message: string | null
+          page_path: string | null
+        }
+        Insert: {
+          id?: string
+          created_at?: string
+          button: string
+          whatsapp_number: string
+          message?: string | null
+          page_path?: string | null
+        }
+        Update: {
+          id?: string
+          created_at?: string
+          button?: string
+          whatsapp_number?: string
+          message?: string | null
+          page_path?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
