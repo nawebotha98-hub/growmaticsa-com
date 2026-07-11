@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { X, Send, Phone, Mail, Calendar } from "lucide-react";
+import { X, Send, Phone, Mail, Calendar, MessageCircle } from "lucide-react";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 import LogoIcon from "./LogoIcon";
 
@@ -10,6 +10,7 @@ const CONTACT_EMAIL = "ewan@growmaticsa.com";
 const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL as string | undefined;
 const SESSION_KEY = "growmatic_chat_session_id";
 const HISTORY_KEY = "growmatic_chat_history";
+const TEASER_DISMISSED_KEY = "growmatic_chat_teaser_dismissed";
 
 type ChatMessage = {
   role: "user" | "assistant";
@@ -56,6 +57,7 @@ const ChatWidget = () => {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showEscalation, setShowEscalation] = useState(false);
+  const [showTeaser, setShowTeaser] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const sessionIdRef = useRef<string>("");
 
@@ -63,7 +65,17 @@ const ChatWidget = () => {
     sessionIdRef.current = getOrCreateSessionId();
     const history = loadHistory();
     setMessages(history.length > 0 ? history : [GREETING]);
+
+    if (!localStorage.getItem(TEASER_DISMISSED_KEY)) {
+      const timer = setTimeout(() => setShowTeaser(true), 1600);
+      return () => clearTimeout(timer);
+    }
   }, []);
+
+  const dismissTeaser = () => {
+    setShowTeaser(false);
+    localStorage.setItem(TEASER_DISMISSED_KEY, "1");
+  };
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -145,16 +157,49 @@ const ChatWidget = () => {
         )}
       </AnimatePresence>
 
+      {/* "Need help?" teaser — makes it unmistakable this is a chat, not just a logo */}
+      <AnimatePresence>
+        {showTeaser && !open && (
+          <motion.div
+            initial={{ opacity: 0, x: 12, scale: 0.95 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 12, scale: 0.95 }}
+            transition={{ duration: 0.3 }}
+            className="fixed bottom-7 right-24 z-[60] max-w-[210px] bg-white text-ink text-[13px] font-medium leading-snug px-4 py-3 rounded-2xl rounded-br-md shadow-[0_10px_30px_-8px_rgba(0,0,0,0.3)] flex items-start gap-2"
+          >
+            <button
+              onClick={() => {
+                dismissTeaser();
+                setOpen(true);
+              }}
+              className="text-left flex-1"
+            >
+              Need help? Ask me anything 👋
+            </button>
+            <button
+              onClick={dismissTeaser}
+              aria-label="Dismiss"
+              className="shrink-0 text-ink/30 hover:text-ink/60 -mt-0.5 -mr-0.5"
+            >
+              <X size={14} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Matt — the chat launcher */}
       <motion.button
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => {
+          setOpen((v) => !v);
+          if (showTeaser) dismissTeaser();
+        }}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.4, type: "spring" }}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.95 }}
         aria-label={open ? "Close chat" : "Chat with Matt"}
-        className="fixed bottom-6 right-6 z-[60] w-14 h-14 rounded-full bg-ink shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] flex items-center justify-center ring-2 ring-signal/40"
+        className="fixed bottom-6 right-6 z-[60] w-14 h-14 rounded-full bg-signal shadow-[0_10px_40px_-10px_rgba(31,157,92,0.6)] flex items-center justify-center"
       >
         <AnimatePresence mode="wait" initial={false}>
           {open ? (
@@ -162,8 +207,8 @@ const ChatWidget = () => {
               <X size={22} className="text-white" />
             </motion.span>
           ) : (
-            <motion.span key="logo" initial={{ scale: 0.7, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.7, opacity: 0 }}>
-              <LogoIcon size={40} />
+            <motion.span key="bubble" initial={{ scale: 0.7, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.7, opacity: 0 }}>
+              <MessageCircle size={24} className="text-white" />
             </motion.span>
           )}
         </AnimatePresence>
