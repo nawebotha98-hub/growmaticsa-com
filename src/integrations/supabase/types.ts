@@ -14,38 +14,187 @@ export type Database = {
   }
   public: {
     Tables: {
-      leads: {
+      bookings: {
         Row: {
           created_at: string
-          email: string | null
+          email: string
           id: string
           message: string | null
           name: string
           phone: string | null
-          source: string
+          preferred_datetime: string
           status: string
         }
         Insert: {
           created_at?: string
-          email?: string | null
+          email: string
           id?: string
           message?: string | null
           name: string
           phone?: string | null
-          source?: string
+          preferred_datetime: string
           status?: string
         }
         Update: {
           created_at?: string
-          email?: string | null
+          email?: string
           id?: string
           message?: string | null
           name?: string
           phone?: string | null
-          source?: string
+          preferred_datetime?: string
           status?: string
         }
         Relationships: []
+      }
+      conversations: {
+        Row: {
+          channel: string
+          created_at: string
+          id: string
+          last_message_at: string
+          lead_email: string | null
+          session_id: string
+          status: string
+        }
+        Insert: {
+          channel?: string
+          created_at?: string
+          id?: string
+          last_message_at?: string
+          lead_email?: string | null
+          session_id: string
+          status?: string
+        }
+        Update: {
+          channel?: string
+          created_at?: string
+          id?: string
+          last_message_at?: string
+          lead_email?: string | null
+          session_id?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      kb_documents: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          source_type: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          source_type?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          source_type?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      leads: {
+        Row: {
+          biggest_challenge: string | null
+          budget: string | null
+          company: string | null
+          created_at: string
+          current_software: string | null
+          email: string | null
+          employees: string | null
+          id: string
+          industry: string | null
+          message: string | null
+          monthly_enquiry_volume: string | null
+          name: string
+          phone: string | null
+          preferred_contact_method: string | null
+          source: string
+          status: string
+          timeline: string | null
+        }
+        Insert: {
+          biggest_challenge?: string | null
+          budget?: string | null
+          company?: string | null
+          created_at?: string
+          current_software?: string | null
+          email?: string | null
+          employees?: string | null
+          id?: string
+          industry?: string | null
+          message?: string | null
+          monthly_enquiry_volume?: string | null
+          name: string
+          phone?: string | null
+          preferred_contact_method?: string | null
+          source?: string
+          status?: string
+          timeline?: string | null
+        }
+        Update: {
+          biggest_challenge?: string | null
+          budget?: string | null
+          company?: string | null
+          created_at?: string
+          current_software?: string | null
+          email?: string | null
+          employees?: string | null
+          id?: string
+          industry?: string | null
+          message?: string | null
+          monthly_enquiry_volume?: string | null
+          name?: string
+          phone?: string | null
+          preferred_contact_method?: string | null
+          source?: string
+          status?: string
+          timeline?: string | null
+        }
+        Relationships: []
+      }
+      messages: {
+        Row: {
+          content: string
+          conversation_id: string
+          created_at: string
+          id: string
+          role: string
+        }
+        Insert: {
+          content: string
+          conversation_id: string
+          created_at?: string
+          id?: string
+          role: string
+        }
+        Update: {
+          content?: string
+          conversation_id?: string
+          created_at?: string
+          id?: string
+          role?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "messages_conversation_id_fkey"
+            columns: ["conversation_id"]
+            isOneToOne: false
+            referencedRelation: "conversations"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       site_content: {
         Row: {
