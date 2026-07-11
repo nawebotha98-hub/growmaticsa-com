@@ -16,79 +16,79 @@ export type Database = {
     Tables: {
       leads: {
         Row: {
-          id: string
           created_at: string
-          name: string
           email: string | null
-          phone: string | null
+          id: string
           message: string | null
+          name: string
+          phone: string | null
           source: string
           status: string
         }
         Insert: {
-          id?: string
           created_at?: string
+          email?: string | null
+          id?: string
+          message?: string | null
           name: string
-          email?: string | null
           phone?: string | null
-          message?: string | null
           source?: string
           status?: string
         }
         Update: {
-          id?: string
           created_at?: string
+          email?: string | null
+          id?: string
+          message?: string | null
           name?: string
-          email?: string | null
           phone?: string | null
-          message?: string | null
           source?: string
           status?: string
-        }
-        Relationships: []
-      }
-      whatsapp_clicks: {
-        Row: {
-          id: string
-          created_at: string
-          button: string
-          whatsapp_number: string
-          message: string | null
-          page_path: string | null
-        }
-        Insert: {
-          id?: string
-          created_at?: string
-          button: string
-          whatsapp_number: string
-          message?: string | null
-          page_path?: string | null
-        }
-        Update: {
-          id?: string
-          created_at?: string
-          button?: string
-          whatsapp_number?: string
-          message?: string | null
-          page_path?: string | null
         }
         Relationships: []
       }
       site_content: {
         Row: {
-          section: string
           content: Json
+          section: string
           updated_at: string
         }
         Insert: {
-          section: string
           content: Json
+          section: string
           updated_at?: string
         }
         Update: {
-          section?: string
           content?: Json
+          section?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      whatsapp_clicks: {
+        Row: {
+          button: string
+          created_at: string
+          id: string
+          message: string | null
+          page_path: string | null
+          whatsapp_number: string
+        }
+        Insert: {
+          button: string
+          created_at?: string
+          id?: string
+          message?: string | null
+          page_path?: string | null
+          whatsapp_number: string
+        }
+        Update: {
+          button?: string
+          created_at?: string
+          id?: string
+          message?: string | null
+          page_path?: string | null
+          whatsapp_number?: string
         }
         Relationships: []
       }

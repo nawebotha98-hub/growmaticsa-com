@@ -20,7 +20,7 @@ export function useSiteContent<T>(section: string, fallback: T): T {
       if (error) throw error;
       return (data?.content as T) ?? fallback;
     },
-    placeholderData: fallback,
+    placeholderData: fallback as any,
     staleTime: 60_000,
     retry: 1,
   });
