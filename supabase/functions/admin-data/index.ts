@@ -200,10 +200,94 @@ Deno.serve(async (req) => {
       return json({ data });
     }
 
+    // ---------- analytics ----------
+    if (method === "GET" && resource === "analytics") {
+      const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+      const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
+
+      const countOf = async (
+        table: string,
+        build?: (q: ReturnType<typeof supabase.from>) => any,
+      ): Promise<number> => {
+        let q: any = supabase.from(table).select("*", { count: "exact", head: true });
+        if (build) q = build(q);
+        const { count, error } = await q;
+        if (error) throw error;
+        return count ?? 0;
+      };
+
+      const [
+        conversationsTotal,
+        convOpen,
+        convQualified,
+        convEscalated,
+        convClosed,
+        convWebsite,
+        convEmail,
+        messagesTotal,
+        leadsTotal,
+        leads7,
+        leads30,
+        bookingsTotal,
+        bookingsPending,
+        bookingsConfirmed,
+        waTotal,
+        wa7,
+      ] = await Promise.all([
+        countOf("conversations"),
+        countOf("conversations", (q) => q.eq("status", "open")),
+        countOf("conversations", (q) => q.eq("status", "qualified")),
+        countOf("conversations", (q) => q.eq("status", "escalated")),
+        countOf("conversations", (q) => q.eq("status", "closed")),
+        countOf("conversations", (q) => q.eq("channel", "website")),
+        countOf("conversations", (q) => q.eq("channel", "email")),
+        countOf("messages"),
+        countOf("leads"),
+        countOf("leads", (q) => q.gte("created_at", sevenDaysAgo)),
+        countOf("leads", (q) => q.gte("created_at", thirtyDaysAgo)),
+        countOf("bookings"),
+        countOf("bookings", (q) => q.eq("status", "pending")),
+        countOf("bookings", (q) => q.eq("status", "confirmed")),
+        countOf("whatsapp_clicks"),
+        countOf("whatsapp_clicks", (q) => q.gte("created_at", sevenDaysAgo)),
+      ]);
+
+      const avgPerConversation =
+        conversationsTotal > 0
+          ? Math.round((messagesTotal / conversationsTotal) * 10) / 10
+          : 0;
+      const conversionRate =
+        conversationsTotal > 0
+          ? Math.round((leadsTotal / conversationsTotal) * 1000) / 10
+          : 0;
+
+      return json({
+        conversations: {
+          total: conversationsTotal,
+          byStatus: {
+            open: convOpen,
+            qualified: convQualified,
+            escalated: convEscalated,
+            closed: convClosed,
+          },
+          byChannel: { website: convWebsite, email: convEmail },
+        },
+        messages: { total: messagesTotal, avgPerConversation },
+        leads: { total: leadsTotal, last7days: leads7, last30days: leads30 },
+        bookings: {
+          total: bookingsTotal,
+          pending: bookingsPending,
+          confirmed: bookingsConfirmed,
+        },
+        whatsappClicks: { total: waTotal, last7days: wa7 },
+        conversionRate,
+      });
+    }
+
     return json(
       {
         error:
-          "unsupported route — use ?resource=leads|whatsapp_clicks|content|conversations|kb_documents|bookings",
+          "unsupported route — use ?resource=leads|whatsapp_clicks|content|conversations|kb_documents|bookings|analytics",
       },
       400,
     );
