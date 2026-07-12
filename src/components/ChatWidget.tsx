@@ -11,7 +11,7 @@ const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL as string | undefined;
 const CHAT_STREAM_URL = CHAT_API_URL?.replace(/\/message$/, "/stream");
 const SESSION_KEY = "growmatic_chat_session_id";
 const HISTORY_KEY = "growmatic_chat_history";
-const TEASER_DISMISSED_KEY = "growmatic_chat_teaser_dismissed";
+const TEASER_DISMISSED_KEY = "growmatic_chat_teaser_dismissed_v2";
 
 type ChatMessage = {
   role: "user" | "assistant";
