@@ -8,6 +8,7 @@ const WHATSAPP_NUMBER = "27671082665";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi! I'd like to chat with someone at GrowMatic SA.")}`;
 const CONTACT_EMAIL = "ewan@growmaticsa.com";
 const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL as string | undefined;
+const CHAT_STREAM_URL = CHAT_API_URL?.replace(/\/message$/, "/stream");
 const SESSION_KEY = "growmatic_chat_session_id";
 const HISTORY_KEY = "growmatic_chat_history";
 const TEASER_DISMISSED_KEY = "growmatic_chat_teaser_dismissed";
@@ -58,6 +59,7 @@ const ChatWidget = () => {
   const [error, setError] = useState<string | null>(null);
   const [showEscalation, setShowEscalation] = useState(false);
   const [showTeaser, setShowTeaser] = useState(false);
+  const [streamingText, setStreamingText] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
   const sessionIdRef = useRef<string>("");
 
@@ -90,9 +92,10 @@ const ChatWidget = () => {
     saveHistory(nextMessages);
     setInput("");
     setSending(true);
+    setStreamingText("");
     setError(null);
 
-    if (!CHAT_API_URL) {
+    if (!CHAT_API_URL || !CHAT_STREAM_URL) {
       setError("Chat isn't configured yet — please reach out on WhatsApp or email instead.");
       setShowEscalation(true);
       setSending(false);
@@ -100,28 +103,61 @@ const ChatWidget = () => {
     }
 
     try {
-      const res = await fetch(CHAT_API_URL, {
+      const res = await fetch(CHAT_STREAM_URL, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ sessionId: sessionIdRef.current, message: text }),
       });
-      const data = await res.json();
 
-      if (!res.ok) {
+      if (!res.ok || !res.body) {
+        const data = await res.json().catch(() => ({}));
         throw new Error(data.error || "Something went wrong.");
       }
 
-      const withReply = [...nextMessages, { role: "assistant" as const, content: data.reply }];
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+      let fullText = "";
+      let finalEvent: { leadCaptured?: boolean; bookingRequested?: boolean; error?: string } | null = null;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+
+        const chunks = buffer.split("\n\n");
+        buffer = chunks.pop() ?? "";
+
+        for (const chunk of chunks) {
+          const line = chunk.trim();
+          if (!line.startsWith("data:")) continue;
+          const parsed = JSON.parse(line.slice(5).trim());
+
+          if (parsed.token) {
+            fullText += parsed.token;
+            setStreamingText(fullText);
+          } else if (parsed.done) {
+            finalEvent = parsed;
+          }
+        }
+      }
+
+      if (finalEvent?.error) {
+        throw new Error(finalEvent.error);
+      }
+
+      const withReply = [...nextMessages, { role: "assistant" as const, content: fullText.trim() || "…" }];
       setMessages(withReply);
       saveHistory(withReply);
 
-      if (data.bookingRequested || data.leadCaptured) {
+      if (finalEvent?.bookingRequested || finalEvent?.leadCaptured) {
         setShowEscalation(true);
       }
     } catch (err) {
       setError("Couldn't reach Matt — please try again, or contact us directly below.");
       setShowEscalation(true);
     } finally {
+      setStreamingText("");
       setSending(false);
     }
   };
@@ -255,7 +291,21 @@ const ChatWidget = () => {
                 </motion.div>
               ))}
 
-              {sending && (
+              {sending && streamingText && (
+                <div className="flex items-end gap-2 justify-start">
+                  <LogoIcon size={22} className="mb-0.5 shrink-0" />
+                  <div className="max-w-[78%] px-3.5 py-2.5 rounded-2xl rounded-bl-md text-[13px] leading-relaxed whitespace-pre-wrap bg-white/[0.07] text-white/90">
+                    {streamingText}
+                    <motion.span
+                      className="inline-block w-1.5 h-3.5 bg-white/50 ml-0.5 align-middle"
+                      animate={{ opacity: [1, 0] }}
+                      transition={{ duration: 0.7, repeat: Infinity, repeatType: "reverse" }}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {sending && !streamingText && (
                 <div className="flex items-end gap-2 justify-start">
                   <LogoIcon size={22} className="mb-0.5 shrink-0" />
                   <div className="bg-white/[0.07] rounded-2xl rounded-bl-md px-3.5 py-2.5 flex gap-1">
