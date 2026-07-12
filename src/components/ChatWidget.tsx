@@ -210,7 +210,7 @@ const ChatWidget = () => {
               }}
               className="text-left flex-1"
             >
-              Need help? Ask me anything 👋
+              Hi, I'm Matt 👋 — need a hand with anything?
             </button>
             <button
               onClick={dismissTeaser}
