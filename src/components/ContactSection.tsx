@@ -26,6 +26,9 @@ const contactSchema = z.object({
 
 type ContactValues = z.infer<typeof contactSchema>;
 
+const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL as string | undefined;
+const CONTACT_LEAD_NOTIFY_URL = CHAT_API_URL?.replace(/\/api\/site-chat\/message$/, "/api/contact-lead");
+
 const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
 
@@ -46,6 +49,17 @@ const ContactSection = () => {
     if (error) {
       toast.error("Something went wrong sending that — please try WhatsApp instead.");
       return;
+    }
+
+    // Best-effort: the lead is already saved above regardless of whether
+    // this succeeds, so a failure here shouldn't block the visitor's
+    // confirmation — it only affects whether the team gets pinged.
+    if (CONTACT_LEAD_NOTIFY_URL) {
+      fetch(CONTACT_LEAD_NOTIFY_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      }).catch(() => {});
     }
 
     setSubmitted(true);
