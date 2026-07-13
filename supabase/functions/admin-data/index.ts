@@ -117,6 +117,79 @@ Deno.serve(async (req) => {
       return json({ data });
     }
 
+    // Writes for the public-facing site chat, called server-to-server from
+    // the backend (never directly from the browser) — routed through this
+    // function's service_role client rather than the anon key + RLS path,
+    // which was rejecting inserts for reasons that didn't resolve even with
+    // provably-correct policies. Same shared-secret auth as every other
+    // route above.
+    if (method === "POST" && resource === "conversations") {
+      let body: { session_id?: string; channel?: string };
+      try {
+        body = await req.json();
+      } catch {
+        return json({ error: "invalid JSON body" }, 400);
+      }
+      if (!body.session_id) return json({ error: "body must include `session_id`" }, 400);
+      const { data, error } = await supabase
+        .from("conversations")
+        .insert({ session_id: body.session_id, channel: body.channel ?? "website" })
+        .select()
+        .single();
+      if (error) throw error;
+      return json({ data });
+    }
+
+    if (method === "PATCH" && resource === "conversations") {
+      if (!section) return json({ error: "section query param required" }, 400);
+      let body: Record<string, unknown>;
+      try {
+        body = await req.json();
+      } catch {
+        return json({ error: "invalid JSON body" }, 400);
+      }
+      const { data, error } = await supabase
+        .from("conversations")
+        .update(body)
+        .eq("id", section)
+        .select()
+        .maybeSingle();
+      if (error) throw error;
+      return json({ data });
+    }
+
+    if (method === "POST" && resource === "messages") {
+      let body: { conversation_id?: string; role?: string; content?: string };
+      try {
+        body = await req.json();
+      } catch {
+        return json({ error: "invalid JSON body" }, 400);
+      }
+      if (!body.conversation_id || !body.role || !body.content) {
+        return json({ error: "body must include `conversation_id`, `role`, and `content`" }, 400);
+      }
+      const { data, error } = await supabase
+        .from("messages")
+        .insert({ conversation_id: body.conversation_id, role: body.role, content: body.content })
+        .select()
+        .single();
+      if (error) throw error;
+      return json({ data });
+    }
+
+    if (method === "POST" && resource === "leads") {
+      let body: Record<string, unknown>;
+      try {
+        body = await req.json();
+      } catch {
+        return json({ error: "invalid JSON body" }, 400);
+      }
+      if (!body.name) return json({ error: "body must include `name`" }, 400);
+      const { data, error } = await supabase.from("leads").insert(body).select().single();
+      if (error) throw error;
+      return json({ data });
+    }
+
     // ---------- kb_documents ----------
     if (method === "GET" && resource === "kb_documents") {
       const { data, error } = await supabase
@@ -169,6 +242,21 @@ Deno.serve(async (req) => {
     }
 
     // ---------- bookings ----------
+    if (method === "POST" && resource === "bookings") {
+      let body: Record<string, unknown>;
+      try {
+        body = await req.json();
+      } catch {
+        return json({ error: "invalid JSON body" }, 400);
+      }
+      if (!body.name || !body.preferred_datetime) {
+        return json({ error: "body must include `name` and `preferred_datetime`" }, 400);
+      }
+      const { data, error } = await supabase.from("bookings").insert(body).select().single();
+      if (error) throw error;
+      return json({ data });
+    }
+
     if (method === "GET" && resource === "bookings") {
       const { data, error } = await supabase
         .from("bookings")
