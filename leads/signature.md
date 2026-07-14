@@ -2,7 +2,46 @@
 
 Used in every outreach draft going forward (HTML version baked into each Gmail draft's `htmlBody`; plain-text version used in `body` and in the `leads/drafts/*.md` files).
 
-## ⭐ Ewan's real Gmail signature (use this in email drafts)
+## ✅ WORKING signature for API-created drafts (use this one)
+
+Renders reliably in Gmail drafts and for recipients because the logo images
+are hosted on growmaticsa.com itself (deployed from `public/email-logo-*.png`
+in this repo), not Google's private mail-sig cache. Verified layout matches
+Ewan's real signature: logo block left, divider, name/contacts right, tagline
+below.
+
+```html
+<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;margin-top:8px;">
+<tr>
+<td style="padding-right:18px;text-align:center;vertical-align:middle;">
+<img src="https://growmaticsa.com/email-logo-icon.png" width="90" height="89" alt="GrowMatic SA" style="display:block;margin:0 auto 4px;"><br>
+<img src="https://growmaticsa.com/email-logo-wordmark.png" width="140" height="40" alt="GrowMatic SA" style="display:block;margin:0 auto;">
+</td>
+<td style="border-left:2px solid #e4e4e0;padding-left:18px;vertical-align:middle;">
+<div style="font-size:20px;font-weight:bold;color:#0a1f44;">Ewan Botha</div>
+<div style="font-size:13px;margin-top:2px;"><span style="color:#1f9d5c;font-weight:bold;">Founder</span> <span style="color:#999;">|</span> <span style="color:#0a1f44;">GrowMatic SA</span></div>
+<div style="margin-top:10px;font-size:13px;line-height:1.9;">
+<span style="color:#1f9d5c;">&#9742;</span> <a href="tel:+27671082665" style="color:#0a1f44;text-decoration:none;">+27 67 108 2665</a><br>
+<span style="color:#1f9d5c;">&#9993;</span> <a href="mailto:ewan@growmaticsa.com" style="color:#0a1f44;text-decoration:none;">ewan@growmaticsa.com</a><br>
+<span style="color:#1f9d5c;">&#127760;</span> <a href="https://growmaticsa.com" style="color:#0a1f44;text-decoration:none;">growmaticsa.com</a><br>
+<span style="color:#1f9d5c;">&#128197;</span> <a href="https://wa.me/27671082665?text=Hi!%20I&#39;d%20like%20to%20book%20a%20free%20strategy%20call." style="color:#1f9d5c;text-decoration:underline;font-weight:bold;">Book a free strategy call on WhatsApp</a>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="padding-top:12px;">
+<div style="border-top:1px solid #e4e4e0;padding-top:10px;font-size:12px;color:#6b6b68;">
+<strong style="color:#0a1f44;">AI agents &amp; automation for South African businesses</strong><br>
+— 24/7 lead response, bookings &amp; follow-ups.
+</div>
+</td>
+</tr>
+</table>
+```
+
+---
+
+## Ewan's Gmail-configured signature (reference only — does NOT work in API drafts)
 
 This is Ewan's actual configured Gmail signature — a single hosted branded
 image (logo + name + phone + email + web + tagline, all baked into the image)
