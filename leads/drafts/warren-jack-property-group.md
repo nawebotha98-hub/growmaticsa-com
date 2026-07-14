@@ -5,7 +5,7 @@ Hi Warren Jack Property Group team,
 
 With a team of agents covering most of PE/Gqeberha's suburbs, I'd imagine keeping enquiries consistently routed to the right agent — and tracked in one place — gets harder as the team grows.
 
-I'm Ewan from GrowMatic SA, a Gqeberha-based AI automation studio. We build a central chatbot that routes new enquiries to the right agent by suburb, keeps a shared CRM record across the whole team, automates viewing bookings, and texts back callers you miss during a busy open house.
+I'm Ewan from GrowMatic SA, a Gqeberha-based AI automation studio. We build a central AI agent — across WhatsApp, email, and a live chat widget on your own website — that routes new enquiries to the right agent by suburb, keeps a shared CRM record across the whole team, automates viewing bookings, and texts back callers you miss during a busy open house.
 
 Would you be open to a free 30-minute call to see if this is a fit for the group? Happy to pilot it with just one or two agents first.
 

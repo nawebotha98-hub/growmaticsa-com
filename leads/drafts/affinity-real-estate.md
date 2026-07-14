@@ -5,7 +5,7 @@ Hi Affinity Real Estate team,
 
 Buyers and renters browsing Property24 and Private Property listings tend to enquire in the evenings and on weekends — right when a boutique agency like Affinity is hardest to reach by phone.
 
-I'm Ewan from GrowMatic SA, an AI automation studio based in Gqeberha. We build after-hours chat assistants that answer common questions and capture lead details straight into a simple CRM, plus automated viewing-booking and follow-up messages after a showing — so no enquiry goes cold overnight.
+I'm Ewan from GrowMatic SA, an AI automation studio based in Gqeberha. We build an after-hours AI agent that answers on WhatsApp, email, and a live chat widget on your own website, captures lead details straight into a simple CRM, and sends automated viewing-booking and follow-up messages after a showing — so no enquiry goes cold overnight.
 
 Would you be open to a free 30-minute call to see whether this fits how Affinity works? Happy to tailor it around just your busiest listings first.
 

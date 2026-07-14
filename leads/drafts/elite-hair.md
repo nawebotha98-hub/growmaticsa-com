@@ -5,7 +5,7 @@ Hi Elite Hair team,
 
 With a busy salon on Main Road in Walmer, I'd imagine the phone rings most when your team is already hands-on with a client — and that's when a booking can go to whoever picks up first.
 
-I'm Ewan from GrowMatic SA, an AI automation studio here in Gqeberha. We build a WhatsApp assistant that answers booking and pricing questions 24/7, texts back anyone whose call you miss, and sends automatic reminders to cut no-shows and prompt rebookings — so fewer empty slots and less admin for the front desk.
+I'm Ewan from GrowMatic SA, an AI automation studio here in Gqeberha. We build an AI agent that answers booking and pricing questions 24/7 across WhatsApp, email, and a live chat widget on your own website, texts back anyone whose call you miss, and sends automatic reminders to cut no-shows and prompt rebookings — so fewer empty slots and less admin for the front desk.
 
 Would you be open to a free 30-minute call to see if it fits Elite Hair? No obligation, and I can show you a live demo on WhatsApp first.
 

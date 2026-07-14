@@ -5,7 +5,7 @@ Hi Serendipity team,
 
 I came across Serendipity in Newton Park — a salon doing cuts, blow-dries and treatments for the whole family tends to have a phone that never stops while everyone's busy at the chair.
 
-I'm Ewan from GrowMatic SA, a Gqeberha-based AI automation studio. We build a WhatsApp assistant that answers booking questions instantly, texts back anyone whose call you miss, and sends automatic reminders that cut no-shows and nudge clients to rebook — so a ringing phone during a busy afternoon doesn't cost you a booking.
+I'm Ewan from GrowMatic SA, a Gqeberha-based AI automation studio. We build an AI agent that answers booking questions instantly across WhatsApp, email, and a live chat widget on your own website, texts back anyone whose call you miss, and sends automatic reminders that cut no-shows and nudge clients to rebook — so a ringing phone during a busy afternoon doesn't cost you a booking.
 
 Would you be open to a free 30-minute call to see how it'd fit? Happy to show you a quick live demo on WhatsApp.
 

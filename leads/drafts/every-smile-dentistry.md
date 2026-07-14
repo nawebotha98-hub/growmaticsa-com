@@ -5,7 +5,7 @@ Hi Every Smile team,
 
 I saw Every Smile offers emergency dentistry alongside general and cosmetic care from Govan Mbeki Street — and emergencies rarely arrive during office hours.
 
-I'm Ewan from GrowMatic SA, an AI automation studio here in Gqeberha. We build a WhatsApp assistant that answers urgent and routine enquiries 24/7, texts back anyone whose call you miss, and sends automatic appointment reminders to reduce no-shows — so an after-hours emergency enquiry becomes a booked patient instead of a missed one.
+I'm Ewan from GrowMatic SA, an AI automation studio here in Gqeberha. We build an AI agent that answers urgent and routine enquiries 24/7 across WhatsApp, email, and a live chat widget on your own website, texts back anyone whose call you miss, and sends automatic appointment reminders to reduce no-shows — so an after-hours emergency enquiry becomes a booked patient instead of a missed one.
 
 Would you be open to a free 30-minute call to see whether this fits the practice? No obligation, and I'm happy to show a live demo on WhatsApp first.
 

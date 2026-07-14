@@ -5,7 +5,7 @@ Hi GQ Dental team,
 
 I came across GQ Dental in Newton Park — with everything from Invisalign to implants under one roof, I'd imagine the front desk fields a steady stream of calls and appointment queries through the day.
 
-I'm Ewan from GrowMatic SA, an AI automation studio here in Gqeberha. We build a WhatsApp assistant that answers routine booking and hours questions 24/7, texts back anyone whose call you miss, and sends automatic appointment reminders that cut no-shows — so a busy chair doesn't have to mean a missed patient.
+I'm Ewan from GrowMatic SA, an AI automation studio here in Gqeberha. We build an AI agent that answers routine booking and hours questions 24/7 across WhatsApp, email, and a live chat widget on your own website, texts back anyone whose call you miss, and sends automatic appointment reminders that cut no-shows — so a busy chair doesn't have to mean a missed patient.
 
 If useful, I'd be glad to do a free 30-minute call to show what this could look like for the practice, no obligation. Happy to answer questions over WhatsApp too if that's easier.
 

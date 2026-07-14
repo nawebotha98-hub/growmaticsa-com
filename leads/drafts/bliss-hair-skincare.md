@@ -5,7 +5,7 @@ Hi Bliss team,
 
 Bliss has built a real reputation for hair and skin care here — and when your stylists are with clients, that's exactly when the phone rings and a booking can slip.
 
-I'm Ewan from GrowMatic SA, a Gqeberha-based AI automation studio. We build a WhatsApp assistant that answers booking and pricing questions instantly, even mid-appointment, texts back anyone whose call you miss, and sends automatic reminders that cut no-shows and nudge clients to rebook — so your chairs stay full without extra front-desk work.
+I'm Ewan from GrowMatic SA, a Gqeberha-based AI automation studio. We build an AI agent that answers booking and pricing questions instantly across WhatsApp, email, and a live chat widget on your own website — even mid-appointment — texts back anyone whose call you miss, and sends automatic reminders that cut no-shows and nudge clients to rebook — so your chairs stay full without extra front-desk work.
 
 Would you be open to a free 30-minute call to see how it'd fit Bliss? Happy to show you a live demo on WhatsApp in a couple of minutes.
 

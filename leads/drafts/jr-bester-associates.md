@@ -5,7 +5,7 @@ Hi J.R Bester & Associates team,
 
 As a boutique firm handling conveyancing, wills, deceased estates and family law since 1996, I'd imagine a good number of your new enquiries come in outside office hours or while you're with clients.
 
-I'm Ewan from GrowMatic SA, an AI automation studio here in Gqeberha. We build simple WhatsApp/website assistants that ask the right first questions on wills or conveyancing enquiries, text back anyone whose call you miss, and keep automatic follow-ups going on active matters — without adding admin headcount.
+I'm Ewan from GrowMatic SA, an AI automation studio here in Gqeberha. We build an AI agent that handles enquiries across WhatsApp, email, and a live chat widget on your own website — asking the right first questions on wills or conveyancing enquiries, texting back anyone whose call you miss, and keeping automatic follow-ups going on active matters — without adding admin headcount.
 
 Would you be open to a free 30-minute call to see if this could help the practice? Happy to keep it small and specific to start.
 

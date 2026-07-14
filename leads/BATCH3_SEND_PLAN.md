@@ -1,10 +1,14 @@
 # Outreach Send Plan — Batch 3 (10 prospects, new verticals)
 
-10 fresh Gmail drafts created 2026-07-14, each with the working branded
-signature (logo hosted on growmaticsa.com — confirmed rendering, unique
-cache-busted image URL per draft so none can hit a stale cache). **Each
-recipient has exactly one draft — no duplicates, no old versions to sort
-through.** Find each by searching the recipient's email in Gmail's search bar.
+10 Gmail drafts (recreated 2026-07-14 after fixing two issues: the branded
+signature, and the pitch itself — the first pass under-sold the product as
+"a WhatsApp assistant" when it's actually an AI agent across **WhatsApp,
+email, and a live chat widget on your own website**, plus bookings/reminders/
+review automation). **Delete everything in your Drafts folder before
+sending these — clears out every earlier version so there's no ambiguity.**
+Find the correct one for each recipient by searching their email in Gmail's
+search bar; there should be exactly one per recipient after the folder is
+cleared.
 
 Read each, hit Send.
 
