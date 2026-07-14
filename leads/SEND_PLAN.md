@@ -13,31 +13,36 @@ inline below so you can copy-paste without opening files.
 
 ---
 
-## ✅ Batch 1 — Email-ready (send from Gmail, ~5 min total)
+## ✅ Batch 1 — Email-ready (compose in Gmail, ~5 min total)
 
-Gmail drafts created 2026-07-14 with **Ewan's real branded signature** (the
-logo/contact graphic). Open Gmail → Drafts, give each a final read, hit send.
+**Send these by composing a new email in Gmail and pasting the body** — do
+NOT use the API-created drafts. Gmail auto-inserts Ewan's real branded
+signature (the logo graphic) only when he composes normally; drafts created
+via the Gmail API strip hosted-image signatures, so they arrive without the
+logo. Composing normally is how Ewan already sends outreach, and the
+signature always renders.
 
-> ⚠️ **Delete the older duplicate drafts first.** An earlier version of each
-> was created with the plain-text signature (no logo). You'll see two drafts
-> per recipient — **keep the one WITH your logo image, delete the plain-text
-> one.** (Plain-sig draft IDs to delete: `r6022768695235773000`,
-> `r2784753587598856340`, `r-2890722774340740283`.)
+Workflow per prospect: **Compose → paste the body from `drafts/<slug>.md`
+(the message down to "Best," — leave off the plain-text signature, Gmail adds
+your real one) → send.**
+
+> 🗑️ Delete any leftover API-created drafts for these three — none carry the
+> signature reliably.
 
 ### [ ] 1. Klinidoc — Medical Practice
 - **To:** mpadmin@klinidoc.co.za
 - **Subject:** A quick idea for streamlining bookings across Klinidoc's branches
-- **Gmail draft ID (correct, branded):** `r-1919864695671641580`
+- **Body:** `drafts/klinidoc.md` (message only)
 
 ### [ ] 2. Greenways Family Medical Centre — Medical Practice
 - **To:** info@greenwaysmedical.co.za
 - **Subject:** Idea for Greenways' medical, pharmacy and travel clinic enquiries
-- **Gmail draft ID (correct, branded):** `r-5404702785005160710`
+- **Body:** `drafts/greenways-family-medical-centre.md` (message only)
 
 ### [ ] 3. McWilliams & Elliott — Law Firm
 - **To:** law@mcwilliams.co.za
 - **Subject:** An idea for McWilliams & Elliott's client intake
-- **Gmail draft ID (correct, branded):** `r7774075705340197169`
+- **Body:** `drafts/mcwilliams-elliott.md` (message only)
 
 ---
 

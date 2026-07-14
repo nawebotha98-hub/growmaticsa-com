@@ -15,10 +15,16 @@ hand. Pulled verbatim from a real sent message (2026-07-13).
 ```
 
 Notes:
-- The `mail-sig` image URL is Ewan's hosted Gmail signature graphic; it renders
-  for recipients exactly as in his own sent mail. If the signature is ever
-  changed in Gmail settings this URL changes — re-pull it from a fresh sent
-  message.
+- ⚠️ **This hosted-image signature does NOT render in drafts created via the
+  Gmail API.** The `ci3.googleusercontent.com/mail-sig/...` URL is Google's
+  private cache of Ewan's signature; it renders inside his own sent mail but
+  Gmail will not load it into a fresh API-created draft (the logo shows up
+  blank). **Do not rely on API drafts to carry the signature.** The reliable
+  way to send with the real signature is for Ewan to **compose the email in
+  Gmail normally** (where his signature auto-inserts) and paste the message
+  body in. This block is kept only as a record of the real signature markup.
+- If the signature is ever changed in Gmail settings this URL changes — re-pull
+  it from a fresh sent message.
 - For **contact-form / WhatsApp** sends (no HTML/images), use the plain-text
   signature below instead — you can't paste an image into a web form.
 
