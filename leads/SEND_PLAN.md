@@ -15,24 +15,29 @@ inline below so you can copy-paste without opening files.
 
 ## ✅ Batch 1 — Email-ready (send from Gmail, ~5 min total)
 
-Fresh Gmail drafts created 2026-07-14 (the earlier session's drafts were
-gone). Each has the full approved text + HTML signature. Open Gmail →
-Drafts, give it a final read, hit send.
+Gmail drafts created 2026-07-14 with **Ewan's real branded signature** (the
+logo/contact graphic). Open Gmail → Drafts, give each a final read, hit send.
+
+> ⚠️ **Delete the older duplicate drafts first.** An earlier version of each
+> was created with the plain-text signature (no logo). You'll see two drafts
+> per recipient — **keep the one WITH your logo image, delete the plain-text
+> one.** (Plain-sig draft IDs to delete: `r6022768695235773000`,
+> `r2784753587598856340`, `r-2890722774340740283`.)
 
 ### [ ] 1. Klinidoc — Medical Practice
 - **To:** mpadmin@klinidoc.co.za
 - **Subject:** A quick idea for streamlining bookings across Klinidoc's branches
-- **Gmail draft ID:** `r6022768695235773000`
+- **Gmail draft ID (correct, branded):** `r-1919864695671641580`
 
 ### [ ] 2. Greenways Family Medical Centre — Medical Practice
 - **To:** info@greenwaysmedical.co.za
 - **Subject:** Idea for Greenways' medical, pharmacy and travel clinic enquiries
-- **Gmail draft ID:** `r2784753587598856340`
+- **Gmail draft ID (correct, branded):** `r-5404702785005160710`
 
 ### [ ] 3. McWilliams & Elliott — Law Firm
 - **To:** law@mcwilliams.co.za
 - **Subject:** An idea for McWilliams & Elliott's client intake
-- **Gmail draft ID:** `r-2890722774340740283`
+- **Gmail draft ID (correct, branded):** `r7774075705340197169`
 
 ---
 

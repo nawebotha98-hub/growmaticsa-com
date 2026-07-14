@@ -2,7 +2,29 @@
 
 Used in every outreach draft going forward (HTML version baked into each Gmail draft's `htmlBody`; plain-text version used in `body` and in the `leads/drafts/*.md` files).
 
-## Plain text
+## ⭐ Ewan's real Gmail signature (use this in email drafts)
+
+This is Ewan's actual configured Gmail signature — a single hosted branded
+image (logo + name + phone + email + web + tagline, all baked into the image)
+followed by the WhatsApp booking link. **Any Gmail email draft created via the
+API must use this exact block** so the sent email matches what Ewan sends by
+hand. Pulled verbatim from a real sent message (2026-07-13).
+
+```html
+<br><div dir="ltr" class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><img src="https://ci3.googleusercontent.com/mail-sig/AIorK4xxKWKI5-L3RyLR0AFzehvJNciQcYddJtuTddxxr9YG_lPepZgnF3Nd6pB3jCTvwoa3_tYBXVJSBuCt" width="420" height="279"></div><span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(31,157,92)"><a href="https://wa.me/27671082665?text=Hi!%20I&#39;d%20like%20to%20book%20a%20free%20strategy%20call." style="color:rgb(31,157,92)" target="_blank"><b>Book a free strategy call on WhatsApp →</b></a></span></div></div>
+```
+
+Notes:
+- The `mail-sig` image URL is Ewan's hosted Gmail signature graphic; it renders
+  for recipients exactly as in his own sent mail. If the signature is ever
+  changed in Gmail settings this URL changes — re-pull it from a fresh sent
+  message.
+- For **contact-form / WhatsApp** sends (no HTML/images), use the plain-text
+  signature below instead — you can't paste an image into a web form.
+
+---
+
+## Plain text (for contact forms / WhatsApp / plain-text fallback)
 
 ```
 Ewan Botha
