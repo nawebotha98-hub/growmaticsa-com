@@ -15,7 +15,7 @@ const defaultFaqs: Faq[] = [
   { q: "Will this work with WhatsApp?", a: "Absolutely. WhatsApp integration is at the core of what we do. Our AI agents can chat with your customers on WhatsApp 24/7, just like a real person." },
   { q: "What happens if something breaks?", a: "We monitor your systems and fix issues fast. Admin Autopilot and Custom Automation Build include priority support. You're never left hanging." },
   { q: "Is this affordable for a small business?", a: "Yes — our Lead Response Bot package is designed to be accessible for small businesses. The ROI typically pays for itself within the first month through saved time and captured leads." },
-  { q: "Can I see it before I pay?", a: "Of course. Book a free strategy call and we'll show you a live demo tailored to your business. No pressure, no obligation." },
+  { q: "Can I see it before I pay?", a: "Of course — right now, no call needed. Hit \"Live demo\" in the menu to try our interactive demos and chat with a real AI agent yourself. Prefer something tailored to your business? Book a free strategy call and we'll walk you through it. No pressure, no obligation." },
 ];
 
 const FAQSection = () => {

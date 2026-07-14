@@ -3,6 +3,7 @@ import { ArrowRight, Check } from "lucide-react";
 import LogoIcon from "./LogoIcon";
 import HeroCanvas from "./HeroCanvas";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
+import { DEMO_URL } from "@/lib/links";
 
 const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
@@ -123,10 +124,12 @@ const Hero = () => (
               <ArrowRight size={16} />
             </a>
             <a
-              href="#services"
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 text-ink px-8 py-4 rounded-full text-[15px] font-medium border border-hairline hover:bg-white transition"
             >
-              See what we build
+              Try the live demo
             </a>
           </motion.div>
         </div>

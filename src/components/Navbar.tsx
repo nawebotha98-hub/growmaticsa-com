@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
+import { DEMO_URL } from "@/lib/links";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -48,6 +49,14 @@ const Navbar = () => {
             </a>
           ))}
           <a
+            href={DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[13px] font-medium text-signal hover:brightness-110 transition"
+          >
+            Live demo
+          </a>
+          <a
             href={WHATSAPP_CALL}
             target="_blank"
             rel="noopener noreferrer"
@@ -86,6 +95,15 @@ const Navbar = () => {
                   {l.label}
                 </a>
               ))}
+              <a
+                href={DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="text-signal hover:brightness-110 transition py-3 text-sm font-medium"
+              >
+                Live demo
+              </a>
               <a
                 href={WHATSAPP_CALL}
                 target="_blank"
