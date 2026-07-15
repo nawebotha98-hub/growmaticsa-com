@@ -9,43 +9,43 @@ import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
 var SERVICES = [
   {
-    name: "AI Customer Service Agent",
+    name: "24/7 Customer Response",
     channels: ["WhatsApp", "Email", "Website live chat widget"],
-    description: "One AI agent across WhatsApp, email, and a live chat widget on your own website. Answers FAQs, qualifies leads, drafts on-brand email replies and follow-ups, escalates only when a human needs to step in."
+    description: "Answers every customer in seconds across WhatsApp, email and your website \u2014 day or night \u2014 and only brings you in when a real person is genuinely needed. No enquiry ever goes cold, and you look bigger and more professional."
   },
   {
-    name: "Lead Capture & Follow-Up",
-    description: "Captures leads from any source and follows up automatically over WhatsApp and email until they book or buy."
+    name: "Lead Management",
+    description: "Captures every enquiry from any source and follows up automatically over WhatsApp and email until the customer books, buys, or clearly says no \u2014 so more of the leads you already pay for turn into paying customers."
   },
   {
-    name: "Booking & Appointment Automation",
-    description: "Customers self-book on WhatsApp in seconds. Automated reminders reduce no-shows."
+    name: "Effortless Booking & Appointments",
+    description: "Customers self-book in seconds and get friendly reminders before every appointment \u2014 a fuller diary, far fewer no-shows, and zero admin on your side."
   },
   {
-    name: "Missed Call Text-Back",
-    description: "When you can't answer, GrowMatic auto-sends the caller a WhatsApp message within seconds \u2014 a missed call becomes a live conversation instead of a lost customer."
+    name: "Never Miss a Lead (Missed-Call Recovery)",
+    description: "The moment a call is missed, GrowMatic sends the caller a friendly WhatsApp within seconds \u2014 a missed call becomes a live conversation instead of a lost customer."
   },
   {
-    name: "Client Dashboard",
-    description: "A private, always-up-to-date link showing upcoming bookings and leads. No extra app, no separate login."
+    name: "Business Intelligence Dashboard",
+    description: "A private, always-current view of every upcoming booking and new lead in one place. No extra app, no separate login \u2014 you always know exactly where the business stands."
   },
   {
-    name: "Review & Reputation Manager",
-    description: "Asks happy customers for Google reviews at the right moment. AI drafts on-brand replies for one-tap approval."
+    name: "Reputation & Reviews",
+    description: "Asks happy customers for a Google review at exactly the right moment and drafts an on-brand reply to every review for one-tap approval \u2014 more 5-star reviews, more trust, more new customers."
   },
   {
-    name: "Social Media Automation",
-    description: "Generates, schedules, and posts to Facebook and Instagram consistently."
+    name: "Marketing on Autopilot",
+    description: "Creates, schedules and posts to Facebook and Instagram consistently on your behalf \u2014 your business stays visible and top-of-mind without you opening the app."
   },
   {
-    name: "Custom AI Workflows",
-    description: "Any repetitive process mapped and automated: invoices, onboarding, reporting."
+    name: "Business Process Optimisation",
+    description: "Maps and streamlines the repetitive work behind the scenes \u2014 quotes, invoices, onboarding, reporting \u2014 so there's less manual admin, fewer mistakes, and more time to grow."
   }
 ];
 var get_services_default = defineTool({
   name: "list_services",
   title: "List GrowMatic services",
-  description: "Returns the full catalog of AI automation services GrowMatic builds for South African businesses.",
+  description: "Returns the full catalog of business growth and automation solutions GrowMatic provides for South African businesses.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -58,47 +58,47 @@ var get_services_default = defineTool({
 import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var PLANS = [
   {
-    name: "Lead Response Bot",
+    name: "Growth Starter",
     setup: "R5,000 once-off",
     monthly: "R3,500/month",
     mostPopular: true,
     features: [
-      "AI agent answering on WhatsApp, email & website chat \u2014 24/7, replies in seconds",
-      "Lead capture & instant follow-up on every enquiry",
-      "Booking & appointment automation straight into your diary",
-      "Missed Call Text-Back included",
-      "Monthly performance report"
+      "24/7 customer response on WhatsApp, email & website chat \u2014 replies in seconds",
+      "Every enquiry captured and followed up automatically",
+      "Bookings & appointments straight into your diary",
+      "Missed calls recovered instantly by WhatsApp",
+      "Monthly results report"
     ]
   },
   {
-    name: "Admin Autopilot",
+    name: "Business Autopilot",
     setup: "R7,500 once-off",
     monthly: "R4,500/month",
     features: [
-      "Everything in Lead Response Bot",
-      "Automated quoting & invoice follow-ups",
-      "Customer reminders (reduce no-shows)",
-      "Client Dashboard included",
-      "Priority support + monthly strategy review"
+      "Everything in Growth Starter",
+      "Automatic quoting & invoice follow-ups",
+      "Reminders that cut no-shows",
+      "Live business dashboard included",
+      "Priority support + monthly growth review"
     ]
   },
   {
-    name: "Custom Automation Build",
+    name: "Custom Growth Solution",
     setup: "From R15,000 once-off",
     monthly: "Custom",
     features: [
-      "Bespoke workflow automation (CRM, email, WhatsApp, sheets)",
-      "Full business audit + dedicated account manager",
-      "Unlimited custom automations",
+      "Tailored solution mapped to your exact workflow",
+      "Full business review + dedicated account manager",
+      "Unlimited custom processes streamlined",
       "Staff training included",
-      "SLA and uptime guarantees"
+      "Service-level & uptime guarantees"
     ]
   }
 ];
 var get_pricing_default = defineTool2({
   name: "get_pricing",
   title: "Get GrowMatic pricing",
-  description: "Returns GrowMatic's current pricing packages (Lead Response Bot, Admin Autopilot, Custom Automation Build) with setup fee, monthly fee, and included features. Start with a 30-day pilot \u2014 month-to-month, cancel anytime.",
+  description: "Returns GrowMatic's current pricing packages (Growth Starter, Business Autopilot, Custom Growth Solution) with setup fee, monthly fee, and included features. Start with a 30-day pilot \u2014 month-to-month, cancel anytime.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -113,14 +113,14 @@ import { z } from "npm:zod@^3.25.76";
 var WHATSAPP_NUMBER = "27671082665";
 var book_call_default = defineTool3({
   name: "get_booking_link",
-  title: "Get strategy call booking link",
-  description: "Returns a pre-filled WhatsApp link to book a free strategy call with GrowMatic. Optionally include a short note about the caller's business or interest to pre-fill the message.",
+  title: "Get consultation booking link",
+  description: "Returns a pre-filled WhatsApp link to book a free business consultation with GrowMatic. Optionally include a short note about the caller's business or interest to pre-fill the message.",
   inputSchema: {
     note: z.string().max(300).optional().describe("Optional short note about the business or interest (max 300 chars).")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
   handler: ({ note }) => {
-    const message = note?.trim() ? `Hi! I'd like to book a free strategy call. ${note.trim()}` : "Hi! I'd like to book a free strategy call.";
+    const message = note?.trim() ? `Hi! I'd like to book a free business consultation. ${note.trim()}` : "Hi! I'd like to book a free business consultation.";
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     return {
       content: [{ type: "text", text: url }],
@@ -133,12 +133,12 @@ var book_call_default = defineTool3({
 import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var FAQS = [
   {
-    q: "How long does setup take?",
-    a: "Most Lead Response Bot systems go live within 2 weeks. Admin Autopilot and Custom Automation Build typically take 3-4 weeks depending on scope. Start with a 30-day pilot \u2014 month-to-month, cancel anytime."
+    q: "How long until it's up and running?",
+    a: "Most businesses on Growth Starter are live within 2 weeks. Business Autopilot and the Custom Growth Solution typically take 3-4 weeks depending on scope. Start with a 30-day pilot \u2014 month-to-month, cancel anytime."
   },
   {
-    q: "Which channels does the AI agent work on?",
-    a: "One agent across WhatsApp, email, and a live chat widget embedded on your own website."
+    q: "Which channels does it cover?",
+    a: "Your customers are looked after across WhatsApp, email, and a live chat widget on your own website \u2014 all from one place."
   },
   {
     q: "Do you work with businesses outside South Africa?",
@@ -166,7 +166,7 @@ var mcp_default = defineMcp({
   name: "growmatic-mcp",
   title: "GrowMatic",
   version: "0.1.0",
-  instructions: "Tools for GrowMatic \u2014 a South African AI automation agency. Use `list_services` to see what GrowMatic builds, `get_pricing` for plans and prices, `list_faqs` for common questions, and `get_booking_link` to generate a WhatsApp link for booking a free strategy call.",
+  instructions: "Tools for GrowMatic \u2014 a South African business growth and automation partner that helps businesses win more customers, respond faster and cut manual admin. Use `list_services` to see the solutions GrowMatic provides, `get_pricing` for plans and prices, `list_faqs` for common questions, and `get_booking_link` to generate a WhatsApp link for booking a free business consultation.",
   tools: [get_services_default, get_pricing_default, get_faqs_default, book_call_default]
 });
 

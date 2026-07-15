@@ -11,42 +11,42 @@ type Plan = { name: string; setup: string; monthly: string; featured: boolean; f
 
 const defaultPlans: Plan[] = [
   {
-    name: "Lead Response Bot",
+    name: "Growth Starter",
     setup: "R5,000",
     monthly: "R3,500/mo",
     featured: true,
     features: [
-      "AI agent answering on WhatsApp, email & website chat — 24/7, replies in seconds",
-      "Lead capture & instant follow-up on every enquiry",
-      "Booking & appointment automation straight into your diary",
-      "Missed Call Text-Back included",
-      "Monthly performance report",
+      "24/7 customer response on WhatsApp, email & website chat — replies in seconds",
+      "Every enquiry captured and followed up automatically",
+      "Bookings & appointments straight into your diary",
+      "Missed calls recovered instantly by WhatsApp",
+      "Monthly results report",
     ],
   },
   {
-    name: "Admin Autopilot",
+    name: "Business Autopilot",
     setup: "R7,500",
     monthly: "R4,500/mo",
     featured: false,
     features: [
-      "Everything in Lead Response Bot",
-      "Automated quoting & invoice follow-ups",
-      "Customer reminders (reduce no-shows)",
-      "Client Dashboard included",
-      "Priority support + monthly strategy review",
+      "Everything in Growth Starter",
+      "Automatic quoting & invoice follow-ups",
+      "Reminders that cut no-shows",
+      "Live business dashboard included",
+      "Priority support + monthly growth review",
     ],
   },
   {
-    name: "Custom Automation Build",
+    name: "Custom Growth Solution",
     setup: "From R15,000",
     monthly: "Custom",
     featured: false,
     features: [
-      "Bespoke workflow automation (CRM, email, WhatsApp, sheets)",
-      "Full business audit + dedicated account manager",
-      "Unlimited custom automations",
+      "Tailored solution mapped to your exact workflow",
+      "Full business review + dedicated account manager",
+      "Unlimited custom processes streamlined",
       "Staff training included",
-      "SLA and uptime guarantees",
+      "Service-level & uptime guarantees",
     ],
   },
 ];
@@ -73,7 +73,7 @@ const PricingSection = () => {
           Transparent. <span className="text-signal">No surprises.</span>
         </h2>
         <p className="text-white/60 mt-6 text-lg font-light max-w-[60ch]">
-          Clear pricing. Real value. Cancel anytime. Every package includes the AI customer service agent across all three channels — WhatsApp, email, and a live chat widget on your website — as standard, not a paid add-on.
+          Clear pricing. Real value. Cancel anytime. Every package includes 24/7 customer response across WhatsApp, email and your website chat — as standard, not a paid add-on.
         </p>
         <p className="text-white/50 mt-4 text-base font-light max-w-[60ch]">
           Start with a 30-day pilot — month-to-month, cancel anytime.
@@ -134,7 +134,7 @@ const PricingSection = () => {
                   : "border border-white/20 text-white hover:bg-white/5"
               }`}
             >
-              Get started
+              Book a free consultation
             </a>
             </TiltCard>
           </motion.div>

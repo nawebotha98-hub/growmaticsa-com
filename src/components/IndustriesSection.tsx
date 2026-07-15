@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 
 const industries = [
-  { eyebrow: "Hospitality", title: "Restaurants & cafés", desc: "Reservations, WhatsApp orders, reviews, loyalty." },
-  { eyebrow: "Retail", title: "Retail & local shops", desc: "Restock alerts, promos, enquiry management." },
-  { eyebrow: "Wellness", title: "Beauty & wellness", desc: "Self-booking, reminders, rebooking nudges." },
-  { eyebrow: "Trades", title: "Trades & services", desc: "Lead qualification, quote follow-up, scheduling." },
+  { eyebrow: "Trades", title: "Electricians & plumbers", desc: "Answer every callout, follow up quotes, book jobs — even mid-job." },
+  { eyebrow: "Security", title: "Security & response", desc: "Instant enquiry response, faster call-outs, organised scheduling." },
+  { eyebrow: "Construction", title: "Construction & contractors", desc: "Capture project leads, chase quotes, keep site admin under control." },
+  { eyebrow: "Medical", title: "Medical & healthcare", desc: "Self-booking, reminders that cut no-shows, calmer front desk." },
+  { eyebrow: "Professional", title: "Professional services", desc: "Qualify enquiries, book consultations, reduce back-office admin." },
+  { eyebrow: "Property", title: "Property & real estate", desc: "Respond to every listing enquiry instantly and never lose a buyer." },
+  { eyebrow: "Retail", title: "Retail & e-commerce", desc: "Answer product questions, recover sales, manage enquiries at scale." },
+  { eyebrow: "Any Business", title: "Any growing business", desc: "Manufacturing, logistics, wellness and more — if you have customers, we can help." },
 ];
 
 const IndustriesSection = () => (
@@ -22,7 +26,7 @@ const IndustriesSection = () => (
           className="font-heading font-extrabold text-ink leading-[1.05]"
           style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", letterSpacing: "-0.04em" }}
         >
-          Built for SA's <span className="text-signal">local business owners</span>.
+          Solutions for <span className="text-signal">every kind of business</span>.
         </h2>
       </motion.div>
 

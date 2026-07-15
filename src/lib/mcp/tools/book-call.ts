@@ -5,9 +5,9 @@ const WHATSAPP_NUMBER = "27671082665";
 
 export default defineTool({
   name: "get_booking_link",
-  title: "Get strategy call booking link",
+  title: "Get consultation booking link",
   description:
-    "Returns a pre-filled WhatsApp link to book a free strategy call with GrowMatic. Optionally include a short note about the caller's business or interest to pre-fill the message.",
+    "Returns a pre-filled WhatsApp link to book a free business consultation with GrowMatic. Optionally include a short note about the caller's business or interest to pre-fill the message.",
   inputSchema: {
     note: z
       .string()
@@ -18,8 +18,8 @@ export default defineTool({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
   handler: ({ note }) => {
     const message = note?.trim()
-      ? `Hi! I'd like to book a free strategy call. ${note.trim()}`
-      : "Hi! I'd like to book a free strategy call.";
+      ? `Hi! I'd like to book a free business consultation. ${note.trim()}`
+      : "Hi! I'd like to book a free business consultation.";
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     return {
       content: [{ type: "text", text: url }],

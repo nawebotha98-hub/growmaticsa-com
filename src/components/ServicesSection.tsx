@@ -6,44 +6,44 @@ type Service = { eyebrow: string; title: string; desc: string };
 
 const defaultServices: Service[] = [
   {
-    eyebrow: "Chat Agent",
-    title: "AI customer service agent.",
-    desc: "One AI agent, three channels — WhatsApp, email, and a live chat widget embedded on your own website. Answers FAQs, qualifies leads, drafts on-brand email replies and follow-ups, and only escalates to you when a human actually needs to step in.",
+    eyebrow: "Customer Communication",
+    title: "24/7 Customer Response.",
+    desc: "The problem: enquiries come in after hours and on WhatsApp, email and your website — and a slow reply loses the sale. Our always-on response system answers every customer in seconds, day or night, across all three channels, and only brings you in when a real person is genuinely needed. The result: no enquiry ever goes cold, and you look bigger and more professional than the competition.",
   },
   {
-    eyebrow: "Lead Capture",
-    title: "Lead capture and follow-up.",
-    desc: "Captures leads from any source and follows up automatically over WhatsApp and email until they book or buy.",
+    eyebrow: "Lead Management",
+    title: "Turn More Enquiries Into Customers.",
+    desc: "The problem: most leads never get a second follow-up, so they quietly go cold. We capture every enquiry from every source and follow up automatically over WhatsApp and email until the customer books, buys, or clearly says no. The result: more of the leads you already pay to get actually turn into paying customers.",
   },
   {
-    eyebrow: "Booking",
-    title: "Booking and appointments.",
-    desc: "Customers self-book on WhatsApp in seconds. Automated reminders go out before every appointment so fewer people forget to show up.",
+    eyebrow: "Bookings & Scheduling",
+    title: "Effortless Booking & Appointments.",
+    desc: "The problem: back-and-forth to set a time, plus costly no-shows. Customers self-book in seconds, and friendly reminders go out automatically before every appointment. The result: a fuller diary, far fewer no-shows, and zero admin on your side.",
   },
   {
-    eyebrow: "Missed Call",
-    title: "Missed call text-back.",
-    desc: "When you can't get to the phone, we auto-send the caller a WhatsApp message within seconds. A missed call turns into a live conversation instead of a lost customer — built for trades, salons, and anyone who can't stop what they're doing to answer.",
+    eyebrow: "Never Miss a Lead",
+    title: "Every Missed Call, Recovered.",
+    desc: "The problem: when you can't get to the phone, most callers don't leave a message — they just call the next business. The moment a call is missed, we send the caller a friendly WhatsApp within seconds. The result: a missed call becomes a live conversation instead of a lost customer — ideal for trades, medical, security and anyone who can't stop mid-job to answer.",
   },
   {
-    eyebrow: "Dashboard",
-    title: "Client dashboard.",
-    desc: "A private, always-up-to-date link showing your upcoming bookings and leads — generated automatically from the same system that runs your WhatsApp. No extra app, no separate login, just one link that's always current.",
+    eyebrow: "Business Intelligence",
+    title: "See Your Business at a Glance.",
+    desc: "The problem: your bookings and leads are scattered across your phone, inbox and memory. A private, always-current dashboard shows every upcoming booking and new lead in one place — no extra app, no separate login. The result: you always know exactly where the business stands, without digging for it.",
   },
   {
-    eyebrow: "Reputation",
-    title: "Review and reputation manager.",
-    desc: "Automatically asks happy customers for a Google review at the right moment. AI drafts on-brand replies to every review, ready for you to approve with one tap.",
+    eyebrow: "Reputation & Reviews",
+    title: "Build a 5-Star Reputation.",
+    desc: "The problem: your happiest customers rarely leave a review, and reviews you do get sit unanswered. We ask satisfied customers for a Google review at exactly the right moment and draft an on-brand reply to every review for you to approve in one tap. The result: more 5-star reviews, more trust, and more new customers finding you online.",
   },
   {
-    eyebrow: "Social",
-    title: "Social media automation.",
-    desc: "Generates, schedules, and posts to Facebook and Instagram consistently — without you ever opening the app.",
+    eyebrow: "Marketing on Autopilot",
+    title: "Show Up Consistently, Effortlessly.",
+    desc: "The problem: staying active on social media falls to the bottom of the list every week. We create, schedule and post to Facebook and Instagram consistently on your behalf. The result: your business stays visible and top-of-mind — without you ever opening the app.",
   },
   {
-    eyebrow: "Custom",
-    title: "Custom AI workflows.",
-    desc: "Any repetitive process mapped and automated: invoices, onboarding, reporting. If a human is repeating it, we replace it.",
+    eyebrow: "Process Optimisation",
+    title: "Streamline the Work Behind the Scenes.",
+    desc: "The problem: quotes, invoices, onboarding and reporting eat hours of manual admin every week. We map the repetitive processes in your business and take them off your plate. The result: less manual work, fewer mistakes, and more time to focus on growth. If your team is repeating it, we can streamline it.",
   },
 ];
 
@@ -60,12 +60,12 @@ const ServicesSection = () => {
         transition={{ duration: 0.6 }}
         className="mb-20"
       >
-        <div className="eyebrow text-graphite mb-6">What We Build</div>
+        <div className="eyebrow text-graphite mb-6">Our Solutions</div>
         <h2
           className="font-heading font-extrabold text-ink leading-[1.05] max-w-3xl"
           style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", letterSpacing: "-0.04em" }}
         >
-          AI systems that <span className="text-signal">move the needle</span>.
+          Solutions that <span className="text-signal">grow your business</span>.
         </h2>
       </motion.div>
 

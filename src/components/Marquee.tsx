@@ -1,14 +1,14 @@
 const items = [
-  "AI Agents",
-  "WhatsApp",
-  "Email",
-  "Live Chat",
-  "Missed-Call Text-Back",
-  "Bookings",
-  "Reminders",
-  "Reviews",
-  "Social",
-  "Dashboards",
+  "Faster Response",
+  "More Leads Captured",
+  "Fewer Missed Calls",
+  "Automatic Follow-Up",
+  "Easier Bookings",
+  "Better Reviews",
+  "Less Admin",
+  "More Sales",
+  "Happier Customers",
+  "More Time Back",
 ];
 
 const Track = () => (

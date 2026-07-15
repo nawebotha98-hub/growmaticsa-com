@@ -10,12 +10,12 @@ import { useSiteContent } from "@/lib/useSiteContent";
 type Faq = { q: string; a: string };
 
 const defaultFaqs: Faq[] = [
-  { q: "Do I need technical knowledge to use this?", a: "Not at all. We build, set up, and manage everything for you. You just approve and go live. If you can use WhatsApp, you can use our systems." },
-  { q: "How long does setup take?", a: "Most systems go live within about 2 weeks. We keep you updated every step of the way." },
-  { q: "Will this work with WhatsApp?", a: "Absolutely. WhatsApp integration is at the core of what we do. Our AI agents can chat with your customers on WhatsApp 24/7, just like a real person." },
-  { q: "What happens if something breaks?", a: "We monitor your systems and fix issues fast. Admin Autopilot and Custom Automation Build include priority support. You're never left hanging." },
-  { q: "Is this affordable for a small business?", a: "Yes — our Lead Response Bot package is designed to be accessible for small businesses. The ROI typically pays for itself within the first month through saved time and captured leads." },
-  { q: "Can I see it before I pay?", a: "Of course — right now, no call needed. Hit \"Live demo\" in the menu to try our interactive demos and chat with a real AI agent yourself. Prefer something tailored to your business? Book a free strategy call and we'll walk you through it. No pressure, no obligation." },
+  { q: "Do I need any technical knowledge?", a: "Not at all. We build, set up, and manage everything for you — you just approve and go live. If you can use WhatsApp, you'll have no trouble at all." },
+  { q: "How long until it's up and running?", a: "Most businesses are live within about 2 weeks. We keep you updated every step of the way." },
+  { q: "Will this work with WhatsApp?", a: "Absolutely. WhatsApp is at the heart of what we do — your customers get looked after on WhatsApp 24/7, just like they're talking to a helpful member of your team." },
+  { q: "What happens if something goes wrong?", a: "We keep an eye on everything and fix issues fast. Business Autopilot and the Custom Growth Solution include priority support — you're never left hanging." },
+  { q: "Is this affordable for a small business?", a: "Yes — our Growth Starter package is designed to be accessible for smaller businesses. It typically pays for itself within the first month through the time you save and the customers you stop losing." },
+  { q: "Can I see it before I commit?", a: "Of course — right now, no call needed. Hit \"Live demo\" in the menu to try it yourself. Prefer something tailored to your business? Book a free consultation and we'll walk you through exactly how it would work for you. No pressure, no obligation." },
 ];
 
 const FAQSection = () => {

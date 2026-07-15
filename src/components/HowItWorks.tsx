@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { num: "01", title: "Free strategy call", desc: "We find your biggest time-wasters." },
-  { num: "02", title: "Custom build plan", desc: "Designed around your business." },
-  { num: "03", title: "We build it for you", desc: "No code, no tech stress — just approve." },
-  { num: "04", title: "Go live and grow", desc: "System runs, we optimise monthly." },
+  { num: "01", title: "Free consultation", desc: "We learn your business and find where you're losing time and sales." },
+  { num: "02", title: "Your growth plan", desc: "A simple plan built around your goals — no jargon, no guesswork." },
+  { num: "03", title: "We set it all up", desc: "We build and manage everything for you. You just approve and go live." },
+  { num: "04", title: "Go live and grow", desc: "It runs quietly in the background while we fine-tune it every month." },
 ];
 
 const HowItWorks = () => (
