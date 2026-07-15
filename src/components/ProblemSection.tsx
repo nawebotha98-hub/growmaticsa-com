@@ -14,7 +14,7 @@ const problems = [
   {
     eyebrow: "The Trap",
     title: "Stuck working in the business, not on it.",
-    desc: "Automation gives you your time back so you can actually grow — instead of just survive.",
+    desc: "The right systems working quietly in the background give you your time back — so you can actually grow instead of just keeping up.",
   },
 ];
 

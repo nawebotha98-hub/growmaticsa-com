@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "24/7", label: "Always-on automation" },
-  { value: "2wk", label: "Average setup time" },
+  { value: "24/7", label: "Every customer answered" },
+  { value: "2wk", label: "Up and running fast" },
   { value: "100%", label: "Built for South Africa" },
   { value: "0", label: "Extra staff needed" },
 ];

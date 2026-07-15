@@ -6,8 +6,8 @@ import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 import { DEMO_URL } from "@/lib/links";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#how-it-works" },
+  { label: "Solutions", href: "#services" },
+  { label: "How It Works", href: "#how-it-works" },
   { label: "Industries", href: "#industries" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },

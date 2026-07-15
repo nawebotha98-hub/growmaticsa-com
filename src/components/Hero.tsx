@@ -80,7 +80,7 @@ const Hero = () => (
             transition={{ duration: 0.5 }}
             className="eyebrow text-graphite mb-8"
           >
-            South Africa · AI Automation
+            South Africa · Business Growth Partner
           </motion.div>
 
           <motion.h1
@@ -90,9 +90,9 @@ const Hero = () => (
             className="font-heading font-extrabold text-ink leading-[1.02]"
             style={{ fontSize: "clamp(3rem, 8vw, 7.5rem)", letterSpacing: "-0.04em" }}
           >
-            Work less.
+            Win more customers.
             <br />
-            Sell <span className="text-signal">more</span>.
+            Work <span className="text-signal">less</span>.
           </motion.h1>
 
           <motion.p
@@ -103,7 +103,7 @@ const Hero = () => (
             className="mt-10 text-lg md:text-xl text-graphite font-light max-w-[60ch]"
             style={{ lineHeight: 1.7 }}
           >
-            Your AI agent answers customers on WhatsApp, email, and a live chat widget on your own website — books appointments while you sleep, and texts back every missed call, so one dropped ringtone doesn't have to mean one lost sale.
+            GrowMatic SA helps South African businesses reply to every enquiry in seconds, follow up automatically, and take care of the admin in the background — so you capture more sales, look more professional, and get hours back every week.
           </motion.p>
 
 
@@ -120,7 +120,7 @@ const Hero = () => (
               onClick={() => trackWhatsAppClick("hero_book_call", "Hi! I'd like to book a free strategy call.")}
               className="inline-flex items-center justify-center gap-2 bg-signal text-white px-8 py-4 rounded-full text-[15px] font-medium hover:brightness-110 active:scale-[0.98] transition"
             >
-              Book a free strategy call
+              Book your free business consultation
               <ArrowRight size={16} />
             </a>
             <a

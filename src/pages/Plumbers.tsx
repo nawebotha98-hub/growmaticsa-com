@@ -9,11 +9,11 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
-const WHATSAPP_PLUMBER = "https://wa.me/27671082665?text=Hi!%20I'm%20a%20plumber%20and%20I'd%20like%20to%20see%20how%20GrowMatic's%20AI%20agent%20could%20work%20for%20my%20business.";
+const WHATSAPP_PLUMBER = "https://wa.me/27671082665?text=Hi!%20I'm%20a%20plumber%20and%20I'd%20like%20to%20see%20how%20GrowMatic%20could%20help%20me%20win%20more%20jobs.";
 
-const PAGE_TITLE = "AI Receptionist & Lead Follow-Up for Plumbers | GrowMatic SA";
+const PAGE_TITLE = "Never Miss Another Job — Growth Solutions for Plumbers | GrowMatic SA";
 const PAGE_DESCRIPTION =
-  "GrowMatic builds AI agents for South African plumbers — answer emergency calls 24/7, follow up on quotes automatically, and never lose a job to a missed call again.";
+  "GrowMatic SA helps South African plumbers answer every call 24/7, follow up on quotes automatically, and book more jobs — so you never lose work to a missed call again.";
 
 const painPoints = [
   {
@@ -92,7 +92,7 @@ const Plumbers = () => {
             className="mt-10 text-lg md:text-xl text-graphite font-light max-w-[60ch]"
             style={{ lineHeight: 1.7 }}
           >
-            Your AI agent answers emergency calls and WhatsApp enquiries 24/7, follows up on every quote until it's won, and books jobs straight into your diary — so you can stay under the sink instead of chasing your phone.
+            Every emergency call and WhatsApp enquiry answered 24/7, every quote followed up until it's won, and jobs booked straight into your diary — so you can stay under the sink instead of chasing your phone.
           </motion.p>
 
           <motion.div
@@ -108,7 +108,7 @@ const Plumbers = () => {
               onClick={() =>
                 trackWhatsAppClick(
                   "plumbers_hero_whatsapp",
-                  "Hi! I'm a plumber and I'd like to see how GrowMatic's AI agent could work for my business."
+                  "Hi! I'm a plumber and I'd like to see how GrowMatic could help me win more jobs."
                 )
               }
               className="inline-flex items-center justify-center gap-2 bg-signal text-white px-8 py-4 rounded-full text-[15px] font-medium hover:brightness-110 active:scale-[0.98] transition"

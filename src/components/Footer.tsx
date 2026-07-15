@@ -15,7 +15,7 @@ const Footer = () => (
             <Logo height={48} />
           </a>
           <p className="text-graphite text-[15px] font-light max-w-sm" style={{ lineHeight: 1.7 }}>
-            We build AI agents and automation systems that keep South African businesses running 24/7 — so you never miss a customer again.
+            We help South African businesses win more customers, respond faster and cut the admin — practical growth solutions that work quietly in the background, 24/7.
           </p>
           <div className="mt-8 flex items-center gap-3 flex-wrap">
             <a
@@ -25,7 +25,7 @@ const Footer = () => (
               onClick={() => trackWhatsAppClick("footer_book_call", "Hi! I'd like to book a free strategy call.")}
               className="inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded-full text-sm font-medium hover:brightness-110 active:scale-[0.98] transition"
             >
-              Book a strategy call
+              Book a consultation
             </a>
             <a
               href={WHATSAPP_GENERAL}
@@ -44,7 +44,7 @@ const Footer = () => (
             <div className="eyebrow text-graphite mb-5">Company</div>
             <div className="flex flex-col gap-3">
               {[
-                { label: "Services", href: "#services" },
+                { label: "Solutions", href: "#services" },
                 { label: "How it works", href: "#how-it-works" },
                 { label: "Industries", href: "#industries" },
                 { label: "Pricing", href: "#pricing" },
@@ -60,7 +60,7 @@ const Footer = () => (
             <div className="eyebrow text-graphite mb-5">Resources</div>
             <div className="flex flex-col gap-3">
               <a href="#faq" className="text-ink text-sm hover:text-signal transition-colors">FAQ</a>
-              <a href="#coming-soon" className="text-ink text-sm hover:text-signal transition-colors">AI Receptionist</a>
+              <a href="#coming-soon" className="text-ink text-sm hover:text-signal transition-colors">Virtual Receptionist</a>
               <a href="#cta" className="text-ink text-sm hover:text-signal transition-colors">Contact</a>
             </div>
           </div>

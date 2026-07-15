@@ -42,7 +42,7 @@ function saveHistory(messages: ChatMessage[]) {
 const GREETING: ChatMessage = {
   role: "assistant",
   content:
-    "Hi, I'm Matt from GrowMatic SA. Ask me about our AI automation services, pricing, or tell me a bit about your business and I'll point you in the right direction.",
+    "Hi, I'm Matt from GrowMatic SA. Tell me a bit about your business and what's slowing you down, and I'll show you how we can help you save time and win more customers. Happy to talk pricing too.",
 };
 
 const WhatsAppIcon = ({ size = 26 }: { size?: number }) => (
@@ -365,7 +365,7 @@ const ChatWidget = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Ask Matt about services, pricing, or your business…"
+                placeholder="Tell Matt about your business…"
                 rows={1}
                 className="flex-1 resize-none bg-white/[0.06] text-white text-[13px] placeholder:text-white/30 rounded-xl px-3.5 py-2.5 outline-none focus:ring-1 focus:ring-signal/50 max-h-24"
               />

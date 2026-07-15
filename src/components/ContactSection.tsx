@@ -85,7 +85,7 @@ const ContactSection = () => {
             Tell us about your business.
           </h2>
           <p className="text-muted-foreground text-center mt-4 mb-12" style={{ lineHeight: 1.7 }}>
-            Leave your details and we'll follow up to book your free strategy call.
+            Leave your details and we'll follow up to book your free business consultation.
           </p>
 
           {submitted ? (

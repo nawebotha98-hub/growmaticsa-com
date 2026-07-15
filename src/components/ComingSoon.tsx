@@ -3,10 +3,10 @@ import { Phone, Calendar, Users, RefreshCw } from "lucide-react";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
 const capabilities = [
-  { icon: Phone, label: "Answers calls 24/7" },
+  { icon: Phone, label: "Answers every call, 24/7" },
   { icon: Calendar, label: "Books appointments" },
-  { icon: Users, label: "Handles leads" },
-  { icon: RefreshCw, label: "Automated follow-ups" },
+  { icon: Users, label: "Captures every lead" },
+  { icon: RefreshCw, label: "Follows up automatically" },
 ];
 
 const ComingSoon = () => (
@@ -28,13 +28,13 @@ const ComingSoon = () => (
           className="font-heading font-extrabold leading-[1.02] max-w-4xl"
           style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)", letterSpacing: "-0.04em" }}
         >
-          AI <span className="text-signal">Receptionist</span>.
+          Virtual <span className="text-signal">Receptionist</span>.
           <br />
           Never miss a call again.
         </h2>
 
         <p className="mt-10 text-white/60 text-lg md:text-xl font-light max-w-[60ch]" style={{ lineHeight: 1.7 }}>
-          A voice AI that picks up on the first ring, sounds human, and does the work of a full-time receptionist — without lunch breaks, sick days, or missed opportunities.
+          A friendly virtual receptionist that picks up on the first ring, sounds completely natural, and does the work of a full-time front desk — without lunch breaks, sick days, or missed opportunities. Every caller is looked after, and every opportunity is captured.
         </p>
 
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -60,7 +60,7 @@ const ComingSoon = () => (
             href="https://wa.me/27671082665?text=Hi!%20I'd%20like%20early%20access%20to%20the%20AI%20Receptionist."
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackWhatsAppClick("coming_soon_early_access", "Hi! I'd like early access to the AI Receptionist.")}
+            onClick={() => trackWhatsAppClick("coming_soon_early_access", "Hi! I'd like early access to the Virtual Receptionist.")}
             className="inline-flex items-center justify-center gap-2 bg-signal text-white px-8 py-4 rounded-full text-[15px] font-medium hover:brightness-110 active:scale-[0.98] transition"
           >
             Join the early access list

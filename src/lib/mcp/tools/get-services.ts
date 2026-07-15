@@ -3,45 +3,45 @@ import { z } from "zod";
 
 const SERVICES = [
   {
-    name: "AI Customer Service Agent",
+    name: "24/7 Customer Response",
     channels: ["WhatsApp", "Email", "Website live chat widget"],
     description:
-      "One AI agent across WhatsApp, email, and a live chat widget on your own website. Answers FAQs, qualifies leads, drafts on-brand email replies and follow-ups, escalates only when a human needs to step in.",
+      "Answers every customer in seconds across WhatsApp, email and your website — day or night — and only brings you in when a real person is genuinely needed. No enquiry ever goes cold, and you look bigger and more professional.",
   },
   {
-    name: "Lead Capture & Follow-Up",
+    name: "Lead Management",
     description:
-      "Captures leads from any source and follows up automatically over WhatsApp and email until they book or buy.",
+      "Captures every enquiry from any source and follows up automatically over WhatsApp and email until the customer books, buys, or clearly says no — so more of the leads you already pay for turn into paying customers.",
   },
   {
-    name: "Booking & Appointment Automation",
+    name: "Effortless Booking & Appointments",
     description:
-      "Customers self-book on WhatsApp in seconds. Automated reminders reduce no-shows.",
+      "Customers self-book in seconds and get friendly reminders before every appointment — a fuller diary, far fewer no-shows, and zero admin on your side.",
   },
   {
-    name: "Missed Call Text-Back",
+    name: "Never Miss a Lead (Missed-Call Recovery)",
     description:
-      "When you can't answer, GrowMatic auto-sends the caller a WhatsApp message within seconds — a missed call becomes a live conversation instead of a lost customer.",
+      "The moment a call is missed, GrowMatic sends the caller a friendly WhatsApp within seconds — a missed call becomes a live conversation instead of a lost customer.",
   },
   {
-    name: "Client Dashboard",
+    name: "Business Intelligence Dashboard",
     description:
-      "A private, always-up-to-date link showing upcoming bookings and leads. No extra app, no separate login.",
+      "A private, always-current view of every upcoming booking and new lead in one place. No extra app, no separate login — you always know exactly where the business stands.",
   },
   {
-    name: "Review & Reputation Manager",
+    name: "Reputation & Reviews",
     description:
-      "Asks happy customers for Google reviews at the right moment. AI drafts on-brand replies for one-tap approval.",
+      "Asks happy customers for a Google review at exactly the right moment and drafts an on-brand reply to every review for one-tap approval — more 5-star reviews, more trust, more new customers.",
   },
   {
-    name: "Social Media Automation",
+    name: "Marketing on Autopilot",
     description:
-      "Generates, schedules, and posts to Facebook and Instagram consistently.",
+      "Creates, schedules and posts to Facebook and Instagram consistently on your behalf — your business stays visible and top-of-mind without you opening the app.",
   },
   {
-    name: "Custom AI Workflows",
+    name: "Business Process Optimisation",
     description:
-      "Any repetitive process mapped and automated: invoices, onboarding, reporting.",
+      "Maps and streamlines the repetitive work behind the scenes — quotes, invoices, onboarding, reporting — so there's less manual admin, fewer mistakes, and more time to grow.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default defineTool({
   name: "list_services",
   title: "List GrowMatic services",
   description:
-    "Returns the full catalog of AI automation services GrowMatic builds for South African businesses.",
+    "Returns the full catalog of business growth and automation solutions GrowMatic provides for South African businesses.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
