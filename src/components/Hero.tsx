@@ -5,7 +5,7 @@ import HeroDevice from "./HeroDevice";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 import { DEMO_URL } from "@/lib/links";
 
-const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
+const WHATSAPP_CALL = "https://wa.me/27827900255?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
 
 const Hero = () => (
   <section id="top" className="section-paper relative overflow-hidden">

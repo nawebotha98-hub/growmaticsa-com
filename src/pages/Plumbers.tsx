@@ -9,7 +9,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
-const WHATSAPP_PLUMBER = "https://wa.me/27671082665?text=Hi!%20I'm%20a%20plumber%20and%20I'd%20like%20to%20see%20how%20GrowMatic%20could%20help%20me%20win%20more%20jobs.";
+const WHATSAPP_PLUMBER = "https://wa.me/27827900255?text=Hi!%20I'm%20a%20plumber%20and%20I'd%20like%20to%20see%20how%20GrowMatic%20could%20help%20me%20win%20more%20jobs.";
 
 const PAGE_TITLE = "Never Miss Another Job — Growth Solutions for Plumbers | GrowMatic SA";
 const PAGE_DESCRIPTION =

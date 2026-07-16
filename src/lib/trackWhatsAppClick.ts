@@ -1,6 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 
-const WHATSAPP_NUMBER = "27671082665";
+const WHATSAPP_NUMBER = "27827900255";
 
 /**
  * Fire-and-forget log of a WhatsApp CTA click. The link already opens in a

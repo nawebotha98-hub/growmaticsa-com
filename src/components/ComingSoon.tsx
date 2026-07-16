@@ -57,7 +57,7 @@ const ComingSoon = () => (
 
         <div className="mt-16 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <a
-            href="https://wa.me/27671082665?text=Hi!%20I'd%20like%20early%20access%20to%20the%20AI%20Receptionist."
+            href="https://wa.me/27827900255?text=Hi!%20I'd%20like%20early%20access%20to%20the%20AI%20Receptionist."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("coming_soon_early_access", "Hi! I'd like early access to the Virtual Receptionist.")}

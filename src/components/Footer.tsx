@@ -3,8 +3,8 @@ import Logo from "./Logo";
 import FooterGrowthCanvas from "./FooterGrowthCanvas";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
-const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
-const WHATSAPP_GENERAL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20GrowMatic%20SA.";
+const WHATSAPP_CALL = "https://wa.me/27827900255?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
+const WHATSAPP_GENERAL = "https://wa.me/27827900255?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20GrowMatic%20SA.";
 
 const Footer = () => (
   <footer className="section-paper border-t border-hairline">
@@ -78,7 +78,7 @@ const Footer = () => (
                 onClick={() => trackWhatsAppClick("footer_phone_link", "Hi! I'd like to learn more about GrowMatic SA.")}
                 className="text-ink hover:text-signal transition-colors"
               >
-                +27 67 108 2665
+                +27 82 790 0255
               </a>
               <span className="flex items-center gap-2 text-graphite">
                 <MapPin size={14} /> South Africa
