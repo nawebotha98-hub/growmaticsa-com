@@ -110,7 +110,7 @@ var get_pricing_default = defineTool2({
 // src/lib/mcp/tools/book-call.ts
 import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.1";
 import { z } from "npm:zod@^3.25.76";
-var WHATSAPP_NUMBER = "27671082665";
+var WHATSAPP_NUMBER = "27827900255";
 var book_call_default = defineTool3({
   name: "get_booking_link",
   title: "Get consultation booking link",

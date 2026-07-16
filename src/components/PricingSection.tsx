@@ -5,7 +5,7 @@ import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 import { useSiteContent } from "@/lib/useSiteContent";
 
 const waLink = (plan: string) =>
-  `https://wa.me/27671082665?text=${encodeURIComponent(`Hi! I'm interested in the ${plan} plan`)}`;
+  `https://wa.me/27827900255?text=${encodeURIComponent(`Hi! I'm interested in the ${plan} plan`)}`;
 
 type Plan = { name: string; setup: string; monthly: string; featured: boolean; features: string[] };
 

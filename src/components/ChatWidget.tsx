@@ -4,7 +4,7 @@ import { X, Send, Phone, Mail, Calendar, MessageCircle } from "lucide-react";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 import LogoIcon from "./LogoIcon";
 
-const WHATSAPP_NUMBER = "27671082665";
+const WHATSAPP_NUMBER = "27827900255";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi! I'd like to chat with someone at GrowMatic SA.")}`;
 const CONTACT_EMAIL = "ewan@growmaticsa.com";
 const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL as string | undefined;

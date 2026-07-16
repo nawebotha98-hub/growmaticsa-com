@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { trackWhatsAppClick } from "@/lib/trackWhatsAppClick";
 
-const WHATSAPP_CALL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
-const WHATSAPP_GENERAL = "https://wa.me/27671082665?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20GrowMatic%20SA.";
+const WHATSAPP_CALL = "https://wa.me/27827900255?text=Hi!%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
+const WHATSAPP_GENERAL = "https://wa.me/27827900255?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20GrowMatic%20SA.";
 
 const CTASection = () => (
   <section id="cta" className="section-ink">

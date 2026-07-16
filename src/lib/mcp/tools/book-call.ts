@@ -1,7 +1,7 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
 
-const WHATSAPP_NUMBER = "27671082665";
+const WHATSAPP_NUMBER = "27827900255";
 
 export default defineTool({
   name: "get_booking_link",
