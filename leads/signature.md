@@ -21,17 +21,17 @@ below.
 <div style="font-size:20px;font-weight:bold;color:#0a1f44;">Ewan Botha</div>
 <div style="font-size:13px;margin-top:2px;"><span style="color:#1f9d5c;font-weight:bold;">Founder</span> <span style="color:#999;">|</span> <span style="color:#0a1f44;">GrowMatic SA</span></div>
 <div style="margin-top:10px;font-size:13px;line-height:1.9;">
-<span style="color:#1f9d5c;">&#9742;</span> <a href="tel:+27671082665" style="color:#0a1f44;text-decoration:none;">+27 67 108 2665</a><br>
+<span style="color:#1f9d5c;">&#9742;</span> <a href="tel:+27827900255" style="color:#0a1f44;text-decoration:none;">+27 82 790 0255</a><br>
 <span style="color:#1f9d5c;">&#9993;</span> <a href="mailto:ewan@growmaticsa.com" style="color:#0a1f44;text-decoration:none;">ewan@growmaticsa.com</a><br>
 <span style="color:#1f9d5c;">&#127760;</span> <a href="https://growmaticsa.com" style="color:#0a1f44;text-decoration:none;">growmaticsa.com</a><br>
-<span style="color:#1f9d5c;">&#128197;</span> <a href="https://wa.me/27671082665?text=Hi!%20I&#39;d%20like%20to%20book%20a%20free%20strategy%20call." style="color:#1f9d5c;text-decoration:underline;font-weight:bold;">Book a free strategy call on WhatsApp</a>
+<span style="color:#1f9d5c;">&#128197;</span> <a href="https://wa.me/27827900255?text=Hi!%20I&#39;d%20like%20to%20book%20a%20free%20strategy%20call." style="color:#1f9d5c;text-decoration:underline;font-weight:bold;">Book a free strategy call on WhatsApp</a>
 </div>
 </td>
 </tr>
 <tr>
 <td colspan="2" style="padding-top:12px;">
 <div style="border-top:1px solid #e4e4e0;padding-top:10px;font-size:12px;color:#6b6b68;">
-<strong style="color:#0a1f44;">AI agents &amp; automation for South African businesses</strong><br>
+<strong style="color:#0a1f44;">Custom automated systems for South African businesses</strong><br>
 — 24/7 lead response, bookings &amp; follow-ups.
 </div>
 </td>
@@ -50,7 +50,7 @@ API must use this exact block** so the sent email matches what Ewan sends by
 hand. Pulled verbatim from a real sent message (2026-07-13).
 
 ```html
-<br><div dir="ltr" class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><img src="https://ci3.googleusercontent.com/mail-sig/AIorK4xxKWKI5-L3RyLR0AFzehvJNciQcYddJtuTddxxr9YG_lPepZgnF3Nd6pB3jCTvwoa3_tYBXVJSBuCt" width="420" height="279"></div><span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(31,157,92)"><a href="https://wa.me/27671082665?text=Hi!%20I&#39;d%20like%20to%20book%20a%20free%20strategy%20call." style="color:rgb(31,157,92)" target="_blank"><b>Book a free strategy call on WhatsApp →</b></a></span></div></div>
+<br><div dir="ltr" class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><img src="https://ci3.googleusercontent.com/mail-sig/AIorK4xxKWKI5-L3RyLR0AFzehvJNciQcYddJtuTddxxr9YG_lPepZgnF3Nd6pB3jCTvwoa3_tYBXVJSBuCt" width="420" height="279"></div><span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(31,157,92)"><a href="https://wa.me/27827900255?text=Hi!%20I&#39;d%20like%20to%20book%20a%20free%20strategy%20call." style="color:rgb(31,157,92)" target="_blank"><b>Book a free strategy call on WhatsApp →</b></a></span></div></div>
 ```
 
 Notes:
@@ -74,12 +74,12 @@ Notes:
 ```
 Ewan Botha
 Founder | GrowMatic SA
-+27 67 108 2665
++27 82 790 0255
 ewan@growmaticsa.com
 growmaticsa.com
-Book a free strategy call on WhatsApp: https://wa.me/27671082665
+Book a free strategy call on WhatsApp: https://wa.me/27827900255
 
-AI agents & automation for South African businesses — 24/7 lead response, bookings & follow-ups.
+Custom automated systems for South African businesses — 24/7 lead response, bookings & follow-ups.
 ```
 
 ## HTML
@@ -89,13 +89,13 @@ AI agents & automation for South African businesses — 24/7 lead response, book
 <div style="font-size:18px; font-weight:bold; color:#0a1f44;">Ewan Botha</div>
 <div style="font-size:13px; margin-top:2px;"><span style="color:#1f9d5c; font-weight:bold;">Founder</span> <span style="color:#999;">|</span> <span style="color:#0a1f44;">GrowMatic SA</span></div>
 <div style="margin-top:8px; font-size:13px;">
-📞 <a href="tel:+27671082665" style="color:#0a1f44; text-decoration:none;">+27 67 108 2665</a><br>
+📞 <a href="tel:+27827900255" style="color:#0a1f44; text-decoration:none;">+27 82 790 0255</a><br>
 ✉️ <a href="mailto:ewan@growmaticsa.com" style="color:#0a1f44; text-decoration:none;">ewan@growmaticsa.com</a><br>
 🌐 <a href="https://growmaticsa.com" style="color:#0a1f44; text-decoration:none;">growmaticsa.com</a><br>
-📅 <a href="https://wa.me/27671082665" style="color:#1f9d5c; text-decoration:underline;">Book a free strategy call on WhatsApp →</a>
+📅 <a href="https://wa.me/27827900255" style="color:#1f9d5c; text-decoration:underline;">Book a free strategy call on WhatsApp →</a>
 </div>
 <div style="margin-top:10px; padding-top:8px; border-top:1px solid #e4e4e0; font-size:12px; color:#6b6b68;">
-<strong style="color:#0a1f44;">AI agents &amp; automation for South African businesses</strong><br>
+<strong style="color:#0a1f44;">Custom automated systems for South African businesses</strong><br>
 24/7 lead response, bookings &amp; follow-ups.
 </div>
 </td></tr></table>
