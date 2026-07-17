@@ -1,16 +1,5 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# This is the SECONDARY (Lovable) property, not the canonical growmaticsa.com
+# site (that is the hand-built `growmatic-sa` repo). It is intentionally kept
+# out of search so it never competes with the real site for the domain.
 User-agent: *
-Allow: /
-
-Sitemap: https://growmaticsa.com/sitemap.xml
+Disallow: /

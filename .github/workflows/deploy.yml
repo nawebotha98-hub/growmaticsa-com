@@ -1,8 +1,14 @@
 name: Deploy to GitHub Pages
 
+# This repo is the SECONDARY (Lovable) property, not the canonical
+# growmaticsa.com site — that is the hand-built `growmatic-sa` repo, which
+# owns the domain and auto-deploys on every push. To stop this build from
+# re-competing for the domain, automatic deploys on push are disabled here:
+# it now only publishes when run manually (Actions tab -> this workflow ->
+# "Run workflow"), for deliberate experimentation. Also remove the custom
+# domain for this repo under Settings -> Pages so it never serves at
+# growmaticsa.com. See CLAUDE.md.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
