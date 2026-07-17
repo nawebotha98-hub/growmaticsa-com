@@ -4,36 +4,40 @@ Used in every outreach draft going forward (HTML version baked into each Gmail d
 
 ## ✅ WORKING signature for API-created drafts (use this one)
 
-Renders reliably in Gmail drafts and for recipients because the logo images
-are hosted on growmaticsa.com itself (deployed from `public/email-logo-*.png`
-in this repo), not Google's private mail-sig cache. Verified layout matches
-Ewan's real signature: logo block left, divider, name/contacts right, tagline
-below.
+Renders reliably in Gmail and for recipients because the logo is a
+transparent PNG hosted on growmaticsa.com itself — **now served from the
+canonical `growmatic-sa` repo root** (`email-logo-icon.png` /
+`email-logo-wordmark.png`), which is what actually serves growmaticsa.com.
+(The old copies lived in `growmaticsa-com/public`, which does NOT serve the
+domain — that's why earlier image signatures showed blank; fixed 2026-07-17.)
+
+**Goes live once the `growmatic-sa` change is merged to main and deploys.**
+Until then the image URLs 404, so use the plain-text signature below.
+
+Layout: the gear icon as a clean mark (left), green divider, name/contacts
+(right), tagline below. Single icon — not icon+wordmark stacked — so the
+brand name isn't duplicated next to "Founder | GrowMatic SA". Verified with a
+rendered screenshot.
 
 ```html
-<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;margin-top:8px;">
+<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;color:#0a1f44;">
 <tr>
-<td style="padding-right:18px;text-align:center;vertical-align:middle;">
-<img src="https://growmaticsa.com/email-logo-icon.png" width="90" height="89" alt="GrowMatic SA" style="display:block;margin:0 auto 4px;"><br>
-<img src="https://growmaticsa.com/email-logo-wordmark.png" width="140" height="40" alt="GrowMatic SA" style="display:block;margin:0 auto;">
+<td style="padding-right:16px;vertical-align:middle;">
+<img src="https://growmaticsa.com/email-logo-icon.png" width="74" height="74" alt="GrowMatic SA" style="display:block;">
 </td>
-<td style="border-left:2px solid #e4e4e0;padding-left:18px;vertical-align:middle;">
-<div style="font-size:20px;font-weight:bold;color:#0a1f44;">Ewan Botha</div>
-<div style="font-size:13px;margin-top:2px;"><span style="color:#1f9d5c;font-weight:bold;">Founder</span> <span style="color:#999;">|</span> <span style="color:#0a1f44;">GrowMatic SA</span></div>
-<div style="margin-top:10px;font-size:13px;line-height:1.9;">
-<span style="color:#1f9d5c;">&#9742;</span> <a href="tel:+27827900255" style="color:#0a1f44;text-decoration:none;">+27 82 790 0255</a><br>
-<span style="color:#1f9d5c;">&#9993;</span> <a href="mailto:ewan@growmaticsa.com" style="color:#0a1f44;text-decoration:none;">ewan@growmaticsa.com</a><br>
-<span style="color:#1f9d5c;">&#127760;</span> <a href="https://growmaticsa.com" style="color:#0a1f44;text-decoration:none;">growmaticsa.com</a><br>
-<span style="color:#1f9d5c;">&#128197;</span> <a href="https://wa.me/27827900255?text=Hi!%20I&#39;d%20like%20to%20book%20a%20free%20strategy%20call." style="color:#1f9d5c;text-decoration:underline;font-weight:bold;">Book a free strategy call on WhatsApp</a>
+<td style="border-left:2px solid #1f9d5c;padding-left:16px;vertical-align:middle;">
+<div style="font-size:18px;font-weight:bold;color:#0a1f44;line-height:1.2;">Ewan Botha</div>
+<div style="font-size:13px;color:#6b6b68;margin-top:2px;"><span style="color:#1f9d5c;font-weight:bold;">Founder</span> &nbsp;&middot;&nbsp; GrowMatic SA</div>
+<div style="font-size:13px;line-height:1.85;margin-top:9px;color:#0a1f44;">
+<a href="tel:+27827900255" style="color:#0a1f44;text-decoration:none;">+27 82 790 0255</a> &nbsp;&middot;&nbsp; <a href="mailto:ewan@growmaticsa.com" style="color:#0a1f44;text-decoration:none;">ewan@growmaticsa.com</a><br>
+<a href="https://growmaticsa.com" style="color:#1f9d5c;text-decoration:none;font-weight:bold;">growmaticsa.com</a> &nbsp;&middot;&nbsp; <a href="https://wa.me/27827900255?text=Hi!%20I&#39;d%20like%20to%20book%20a%20free%20strategy%20call." style="color:#1f9d5c;text-decoration:none;">Book a free strategy call on WhatsApp &rarr;</a>
 </div>
 </td>
 </tr>
 <tr>
-<td colspan="2" style="padding-top:12px;">
-<div style="border-top:1px solid #e4e4e0;padding-top:10px;font-size:12px;color:#6b6b68;">
-<strong style="color:#0a1f44;">Custom automated systems for South African businesses</strong><br>
-— 24/7 lead response, bookings &amp; follow-ups.
-</div>
+<td colspan="2" style="padding-top:13px;">
+<div style="border-top:1px solid #e4e4e0;padding-top:9px;font-size:11px;letter-spacing:2.5px;color:#1f9d5c;font-weight:bold;">AUTOMATE. &nbsp;ORGANISE. &nbsp;GROW.</div>
+<div style="font-size:11px;color:#6b6b68;margin-top:4px;">Custom automated systems for South African businesses &mdash; 24/7 lead response, bookings &amp; follow-ups.</div>
 </td>
 </tr>
 </table>
