@@ -372,10 +372,57 @@ Deno.serve(async (req) => {
       });
     }
 
+    // ---------- client_configs (agency's private client backup store) ----------
+    if (method === "GET" && resource === "client-configs") {
+      const { data, error } = await supabase
+        .from("client_configs")
+        .select("*")
+        .order("updated_at", { ascending: false });
+      if (error) throw error;
+      return json({ data });
+    }
+
+    if (method === "PUT" && resource === "client-configs") {
+      let body: { client_id?: string; config?: unknown; knowledge_base?: string };
+      try {
+        body = await req.json();
+      } catch {
+        return json({ error: "invalid JSON body" }, 400);
+      }
+      if (!body.client_id || body.config === undefined) {
+        return json({ error: "body must include `client_id` and `config`" }, 400);
+      }
+      const { data, error } = await supabase
+        .from("client_configs")
+        .upsert(
+          {
+            client_id: body.client_id,
+            config: body.config,
+            knowledge_base: body.knowledge_base ?? "",
+            updated_at: new Date().toISOString(),
+          },
+          { onConflict: "client_id" },
+        )
+        .select()
+        .single();
+      if (error) throw error;
+      return json({ data });
+    }
+
+    if (method === "DELETE" && resource === "client-configs") {
+      if (!section) return json({ error: "section query param required" }, 400);
+      const { error } = await supabase
+        .from("client_configs")
+        .delete()
+        .eq("client_id", section);
+      if (error) throw error;
+      return json({ deleted: true });
+    }
+
     return json(
       {
         error:
-          "unsupported route — use ?resource=leads|whatsapp_clicks|content|conversations|kb_documents|bookings|analytics",
+          "unsupported route — use ?resource=leads|whatsapp_clicks|content|conversations|kb_documents|bookings|client-configs|analytics",
       },
       400,
     );
